@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("index")
 public class IndexController {
 
-    private Logger logger = LoggerFactory.getLogger(IndexController.class);
 
+    private Logger logger = LoggerFactory.getLogger(IndexController.class);
+    
 }
