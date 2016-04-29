@@ -1,136 +1,302 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="context/context.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
     <meta charset="utf-8">
-    <title>回忆-情侣博客模板</title>
-    <link href="css/index.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Infusion WP Theme</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="js/modernizr.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<%--<div class="topnav">--%>
-   <%----%>
-<%--</div>--%>
-<header>
-    <div class="quotes">
-        <p>初遇时，她的微笑，她往日的深情、承诺和傻劲，两个人共度的美丽时刻，一一印在回忆里，今天的感情已经比不上从前，但是我爱着恋着往日的她，舍不得离开。</p>
-        <div class="text5">记录·回忆</div>
-        <div class="flower"><img src="images/flower.jpg"></div>
-    </div>
-    <!--nav begin-->
-    <div id="nav">
+    <body>
+    <header class="clearfix">
+        <div class="logo col-md-3"><h2 class="logo-text">INFUSION</h2></div>
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="#" class="active">design folio</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">our business</a></li>
+                <li><a href="#">how we help</a></li>
+                <li><a href="#">take the tour</a></li>
+                <li><a href="#" class="last">contact</a></li>
+            </ul>
+        </nav>
+        <div class="pullcontainer">
+            <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+        </div>
+    </header>
+    <div class="banner">
         <ul>
-            <li><a href="/">首页</a></li>
-            <li><a href="#">关于我</a></li>
-            <li><a href="#">碎言碎语</a></li>
-            <li><a href="#">慢生活</a></li>
-            <li><a href="#">永无止境</a></li>
-            <li><a href="#">留言板</a></li>
+            <li style="background-image: url('img/01.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="hero-title">
+                                CUTTING EDGE WP BUSINESS THEME
+                            </div>
+                            <p class="hero-content">Gutful of bottlo no dramas he's got a massive hooroo.</p>
+                            <a href="#" class="hero-btn">BUY IT NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('img/02.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="hero-title">
+                                VERY PHOTO, SUCH WAVES, WOW.
+                            </div>
+                            <p class="hero-content">A very artsy photo with waves crashing over rocks. So /emosh.</p>
+                            <a href="#" class="hero-btn">BEER ME!</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
-    <!--nav end-->
-</header>
-<div class="photowall">
-    <ul class="wall_a">
-        <li><a href="/"><img src="images/p01.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-        <li><a href="/"><img src="images/p02.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-        <li><a href="/"><img src="images/p03.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-        <li>
-            <p class="text_a"><a href="/">一个人最好的模样大概是平静一点，坦然接受自己所有的弱点，不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏......</a></p>
-        </li>
-        <li><a href="/"><img src="images/p04.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-        <li>
-            <p class="text_b"><a href="/">逃避自己的人，最终只能导致自己世界的崩塌，而变得越来越没有安全感。</a></p>
-        </li>
-        <li><a href="/"><img src="images/p05.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-        <li><a href="/"><img src="images/p06.jpg">
-            <figcaption>
-                <h2>不再因为别人过得好而焦虑，在没有人看得到你的时候依旧能保持节奏 </h2>
-            </figcaption>
-        </a></li>
-    </ul>
-</div>
-<div class="about">
-    <ul>
-        <div id="fountainG">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    <div class="container">
+        <div class="arrow"></div>
+    </div>
+    <div class="container carousel">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="ca-hover">
+                    <div class="carousel-img">
+                        <img src="img/c01.jpg" alt="Carousel Img">
+                    </div>
+                    <div class="carousel-avatar av1">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="ca-hover">
+                    <div class="carousel-img">
+                        <img src="img/c02.jpg" alt="Carousel Img">
+                    </div>
+                    <div class="carousel-avatar av2">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="ca-hover">
+                    <div class="carousel-img">
+                        <img src="img/c03.jpg" alt="Carousel Img">
+                    </div>
+                    <div class="carousel-avatar av3">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="ca-hover">
+                    <div class="carousel-img">
+                        <img src="img/c04.jpg" alt="Carousel Img">
+                    </div>
+                    <div class="carousel-avatar av4">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
         </div>
-        <div class="about_girl"><span><a href="/"><img src="images/girl.jpg"></a></span>
-            <p>初遇时，他的幽默，他往日的深情、承诺和傻劲儿，两个人共度的美丽时刻，一一印在我的回忆里....</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="controls">
+                <ul>
+                    <li><span class="pagination active"></span></li>
+                    <li><span class="pagination"></span></li>
+                    <li><span class="pagination"></span></li>
+                </ul>
+            </div>
         </div>
-        <div class="about_boy"><span><a href="/"><img src="images/boy.jpg"></a></span>
-            <p>初遇时，她的热情，她腼腆的微笑、可爱和气质，两个人共度的愉快时刻，一一印在我的回忆里...</p>
+    </div>
+    <div class="text-inter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <div class="divider"></div>
+                    <a href="#" class="button solid-color">BUTTON</a>
+                    <a href="#" class="button extra-color">BUTTON</a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+                </div>
+            </div>
         </div>
-    </ul>
-</div>
-<div class="blank"></div>
-<div class="blog">
-    <figure> <a href="/"><img src="images/t01.jpg"></a>
-        <p><a href="/">愿有人陪你一起颠沛流离</a></p>
-        <figcaption>有一天晚上我收到朋友的邮件，他问我怎样可以最快地摆脱寂寞，我想了想不知道应该怎么回答他，因为我从来没有摆脱过这个问题，我只能去习惯它，就像习惯身体的一部分。</figcaption>
-    </figure>
-    <figure> <a href="/"><img src="images/t02.jpg"></a>
-        <p><a href="/">你要去相信，没有到不了的明天</a></p>
-        <figcaption>不管你现在是一个人走在异乡的街道上始终没有找到一丝归属感，还是你在跟朋友们一起吃饭开心地笑着的时候闪过一丝落寞。</figcaption>
-    </figure>
-    <figure> <a href="/"><img src="images/t03.jpg"></a>
-        <p><a href="/">美丽的茧</a></p>
-        <figcaption>让世界拥有它的脚步，让我保有我的茧。当溃烂已极的心灵再不想做一丝一毫的思索时，就让我静静回到我的茧内，以回忆为睡榻，以悲哀为覆被，这是我唯一的美丽。</figcaption>
-    </figure>
-</div>
-<div class="blank"></div>
-<div class="text6">相守·祝福</div>
-<div class="hope">
-    <ul>
-        <div class="visitors">
-            <dl>
-                <dt><img src="images/s6.jpg"> </dt>
-                <dd><a href="/">DanceSmile</a> </dd>
-                <dd>你们本就是天生一对，地造一双，而今共偕连理，今后更需彼此宽容、互相照顾，祝福你们！</dd>
-            </dl>
-            <dl>
-                <dt><img src="images/s7.jpg"> </dt>
-                <dd><a href="/">骄傲的小甜甜</a> </dd>
-                <dd>十年修得同船渡，百年修得共枕眠。于茫茫人海中找到她，分明是千年前的一段缘，祝你俩幸福美满，共谐连理。</dd>
-            </dl>
-            <dl>
-                <dt><img src="images/s8.jpg"> </dt>
-                <dd><a href="/">执子之手</a> </dd>
-                <dd>托清风捎去衷心的祝福，让流云奉上真挚的情意；今夕何夕，空气里都充满了醉人的甜蜜。谨祝我最亲爱的朋友，从今后，爱河永浴！</dd>
-            </dl>
+    </div>
+    <div class="h2-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="standard-block">LATEST ARTICLES</h2>
+                </div>
+            </div>
         </div>
-    </ul>
-</div>
-<footer>
-    <p>Design by <a href="/" target="_blank">DanceSmile</a></p>
-</footer>
-</body>
+    </div>
+    <div class="container-fluid container-articles">
+        <div class="row articles">
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/01.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/02.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/03.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/04.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/05.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/06.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+        </div>
+        <div class="row articles">
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/07.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/08.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/09.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/10.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/11.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+            <div class="col-md-2 article-img">
+                <a href="#"><img src="img/articles/12.jpg" alt=""></a>
+                <div class="article-overlay"></div>
+            </div>
+        </div>
+    </div>
+    <div class="laptop-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 laptop-placeholder">
+                    <div class="slideshow">
+                        <figure class="show"><img alt="" src="img/slider/slide-01.png" /></figure>
+                        <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+                        <figure><img alt="" src="img/slider/slide-01.png" /></figure>
+                        <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+                        <span class="prev"><i class="fa fa-angle-left fa-4x"></i></span>
+                        <span class="next"><i class="fa fa-angle-right fa-4x"></i></span>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quote-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="quote-slideshow">
+                            <figure class="show"><h2>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. </h2>
+                                <figcaption>
+                                    Nam mi enim, auctor non ultricies.
+                                </figcaption>
+                            </figure>
+                            <figure><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</h2>
+                                <figcaption>
+                                    Nam mi enim, auctor.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <span class="quote-prev circle"><i class="fa fa-angle-left fa-2x"></i></span>
+                    <span class="quote-next circle"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shadow"></div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h2>INFUSION</h2>
+                </div>
+                <div class="col-md-5">
+                    <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+                </div>
+                <div class="col-md-3">
+                    <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+                </div>
+                <div class="col-md-2">
+                    <ul class="footer-links">
+                        <li><a href="#">List One</a></li>
+                        <li><a href="#">Page Two</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/unslider.min.js"></script>
+
+    </body>
 </html>

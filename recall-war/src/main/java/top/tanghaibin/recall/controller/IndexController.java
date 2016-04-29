@@ -15,4 +15,9 @@ public class IndexController {
 
     private Logger logger = LoggerFactory.getLogger(IndexController.class);
 
+
+    @RequestMapping("test")
+    public String test(String name){
+        return "main";
+    }
 }
