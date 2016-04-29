@@ -985,3 +985,6 @@ footer h2 {
     background: #fff;
     opacity: 1;
 }
+.clearfix li{
+    padding-left: 50px;
+}

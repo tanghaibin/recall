@@ -74,3 +74,11 @@ showCurrent();
 });
  
 });
+/**
+ *用于头部导航跳转改变字体颜色
+ * @param start
+ */
+function skip(start){
+    $("#navigate li a").removeClass();
+    $("#navigate li:eq("+start+") a").attr("class","active");
+}
