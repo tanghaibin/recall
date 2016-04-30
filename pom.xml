@@ -11,6 +11,7 @@
     <module>recall-war</module>
     <module>recall-service</module>
     <module>recall-dao</module>
+    <module>recall-admin-war</module>
   </modules>
 
 
