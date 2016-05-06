@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS re_picturs;
 CREATE TABLE  re_picturs(
   p_id INT auto_increment PRIMARY key,
   p_address VARCHAR (100) COMMENT '图片地址',
+  p_resourceId int COMMENT '图片来源ID',
   p_name VARCHAR(32) COMMENT '图片名字',
   p_suffix varchar(5) COMMENT '图片后缀',
   p_type int COMMENT '图片类型0动态1相册2头像',

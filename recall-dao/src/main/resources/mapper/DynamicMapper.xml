@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="top.tanghaibin.dao.recall.DynamicMapper">
+<mapper namespace="top.tanghaibin.recall.dao.mapper.DynamicMapper">
 	<resultMap type="top.tanghaibin.recall.entity.Dynamic" id="dynamicResultMap">
   	   <id column="d_id" property="id" />
   	   <result column="d_content" property="content" />
   	   <result column="d_commendCount" property="commendCount" />
   	   <result column="d_createDate" property="createDate" />
 	</resultMap>
+
+	<resultMap type="top.tanghaibin.recall.entity.Dynamic" id="dynamicResultMap2" extends="dynamicResultMap">
+		<collection property="picturs" column="d_id" select="top.tanghaibin.recall.dao.mapper.PictursMapper.selectDynamicPicByFK"></collection>
+	</resultMap>
+
+	<select id="selectDynamicPage" resultMap="dynamicResultMap2">
+		SELECT
+			d_id,
+			d_content,
+			d_createDate
+		FROM re_dynamic
+		ORDER BY d_createDate
+		DESC
+	</select>
 </mapper>

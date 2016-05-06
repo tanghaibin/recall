@@ -29,6 +29,8 @@ public class Picturs implements Serializable{
   	  private Integer type; // 图片类型0动态1相册2头像
       @Column(name = "p_createDate")
   	  private Date createDate; // 创建时间
+	@Column(name="p_resourceId")
+	private Integer resourceId;//图片来源id
   	  /**
 	   * 
 	   * @return id
@@ -113,4 +115,12 @@ public class Picturs implements Serializable{
 	  public void setCreateDate(Date createDate){
 	    this.createDate = createDate;
 	  }
+
+	public Integer getResourceId() {
+		return resourceId;
+	}
+
+	public void setResourceId(Integer resourceId) {
+		this.resourceId = resourceId;
+	}
 }

@@ -11,7 +11,7 @@
   <nav class="clearfix">
     <ul class="clearfix" id="navigate">
       <li><a href="${ctx}/index.jsp" class="active">主页</a></li>
-      <li><a href="${ctx}/dynamic/toDynamicPage">动态</a></li>
+      <li><a href="${ctx}/dynamic/toDynamicPage?pageNumber=0&pageSize=10">动态</a></li>
       <li><a href="#">博客</a></li>
       <li><a href="#">相册</a></li>
       <li><a href="#">留言板</a></li>

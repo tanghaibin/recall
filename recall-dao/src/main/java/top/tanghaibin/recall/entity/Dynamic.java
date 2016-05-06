@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 代码生成器自动生成
@@ -25,6 +26,8 @@ public class Dynamic implements Serializable{
   	  private Integer commendCount; // 点赞数
       @Column(name = "d_createDate")
   	  private Date createDate; // 创建时间
+	@Transient
+	private List<Picturs> picturs;
   	  /**
 	   * 
 	   * @return id
@@ -81,4 +84,12 @@ public class Dynamic implements Serializable{
 	  public void setCreateDate(Date createDate){
 	    this.createDate = createDate;
 	  }
+
+	public List<Picturs> getPicturs() {
+		return picturs;
+	}
+
+	public void setPicturs(List<Picturs> picturs) {
+		this.picturs = picturs;
+	}
 }

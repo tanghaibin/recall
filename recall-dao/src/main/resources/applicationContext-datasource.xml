@@ -12,7 +12,7 @@
        http://www.springframework.org/schema/aop/spring-aop.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-
+<context:component-scan base-package="top.tanghaibin.recall.service"></context:component-scan>
 	<!-- datasource  -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<property name="url" value="${datasource.url}" />
@@ -37,7 +37,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:application-entity.xml"/>
 		<!-- 扫描model包-->
-		<property name="typeAliasesPackage" value="top.tanghaibin.recall.dao.entity"/>
+		<property name="typeAliasesPackage" value="top.tanghaibin.recall.entity"/>
 		<property name="plugins"><!--分页插件-->
 			<array>
 				<bean class="com.github.pagehelper.PageHelper">

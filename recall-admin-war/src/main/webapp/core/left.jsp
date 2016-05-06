@@ -29,8 +29,8 @@
     if(parentId==0){
 
     }else if(parentId==1){
-      navStr += " <li><cite></cite><a href='${ctx}/customerCoupon/toCustomerManagerPage' target='rightFrame'>动态列表</a><i></i></li>";
-      navStr += " <li><cite></cite><a href='${ctx}/customerCoupon/toCustomerManagerPage' target='rightFrame'>添加动态</a><i></i></li>";
+      navStr += " <li><cite></cite><a href='${ctx}/dynamic/toDynamicPage' target='rightFrame'>动态列表</a><i></i></li>";
+      navStr += " <li><cite></cite><a href='${ctx}/dynamic/toAddDynamicPage' target='rightFrame'>添加动态</a><i></i></li>";
     }else if(parentId==2){
 
     }else if(parentId==3){

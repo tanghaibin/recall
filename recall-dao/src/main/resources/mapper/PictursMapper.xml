@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="top.tanghaibin.dao.recall.PictursMapper">
+<mapper namespace="top.tanghaibin.recall.dao.mapper.PictursMapper">
 	<resultMap type="top.tanghaibin.recall.entity.Picturs" id="pictursResultMap">
   	   <id column="p_id" property="id" />
   	   <result column="p_address" property="address" />
+  	   <result column="p_resourceId" property="resourceId" />
   	   <result column="p_name" property="name" />
   	   <result column="p_suffix" property="suffix" />
   	   <result column="p_type" property="type" />
   	   <result column="p_createDate" property="createDate" />
 	</resultMap>
+
+	<select id="selectDynamicPicByFK" parameterType="int" resultMap="pictursResultMap">
+		SELECT
+		p_id,
+		p_address,
+		p_resourceId,
+		p_type
+		FROM re_picturs
+		WHERE p_resourceId = #{_parameter} AND p_type = 0
+	</select>
 </mapper>
