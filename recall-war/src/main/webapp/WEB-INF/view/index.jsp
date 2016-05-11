@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="context/context.jsp"%>
+<%@include file="../../context/context.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Infusion WP Theme</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/queries.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,10 +21,10 @@
     <![endif]-->
 </head>
 <body>
-<%@include file="context/top.jsp"%>
+<%@include file="../../context/top.jsp"%>
 <div class="banner">
     <ul>
-        <li style="background-image: url('img/01.jpg');">
+        <li style="background-image: url('../../img/01.jpg');">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </li>
-        <li style="background-image: url('img/02.jpg');">
+        <li style="background-image: url('../../img/02.jpg');">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
@@ -61,7 +61,7 @@
         <div class="col-md-3">
             <div class="ca-hover">
                 <div class="carousel-img">
-                    <img src="img/c01.jpg" alt="Carousel Img">
+                    <img src="../../img/c01.jpg" alt="Carousel Img">
                 </div>
                 <div class="carousel-avatar av1">
                 </div>
@@ -76,7 +76,7 @@
         <div class="col-md-3">
             <div class="ca-hover">
                 <div class="carousel-img">
-                    <img src="img/c02.jpg" alt="Carousel Img">
+                    <img src="../../img/c02.jpg" alt="Carousel Img">
                 </div>
                 <div class="carousel-avatar av2">
                 </div>
@@ -91,7 +91,7 @@
         <div class="col-md-3">
             <div class="ca-hover">
                 <div class="carousel-img">
-                    <img src="img/c03.jpg" alt="Carousel Img">
+                    <img src="../../img/c03.jpg" alt="Carousel Img">
                 </div>
                 <div class="carousel-avatar av3">
                 </div>
@@ -106,7 +106,7 @@
         <div class="col-md-3">
             <div class="ca-hover">
                 <div class="carousel-img">
-                    <img src="img/c04.jpg" alt="Carousel Img">
+                    <img src="../../img/c04.jpg" alt="Carousel Img">
                 </div>
                 <div class="carousel-avatar av4">
                 </div>
@@ -160,53 +160,53 @@
 <div class="container-fluid container-articles">
     <div class="row articles">
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/01.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/01.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/02.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/02.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/03.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/03.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/04.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/04.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/05.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/05.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/06.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/06.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
     </div>
     <div class="row articles">
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/07.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/07.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/08.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/08.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/09.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/09.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/10.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/10.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/11.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/11.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
         <div class="col-md-2 article-img">
-            <a href="#"><img src="img/articles/12.jpg" alt=""></a>
+            <a href="#"><img src="../../img/articles/12.jpg" alt=""></a>
             <div class="article-overlay"></div>
         </div>
     </div>
@@ -216,10 +216,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 laptop-placeholder">
                 <div class="slideshow">
-                    <figure class="show"><img alt="" src="img/slider/slide-01.png" /></figure>
-                    <figure><img alt="" src="img/slider/slide-02.png" /></figure>
-                    <figure><img alt="" src="img/slider/slide-01.png" /></figure>
-                    <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+                    <figure class="show"><img alt="" src="../../img/slider/slide-01.png" /></figure>
+                    <figure><img alt="" src="../../img/slider/slide-02.png" /></figure>
+                    <figure><img alt="" src="../../img/slider/slide-01.png" /></figure>
+                    <figure><img alt="" src="../../img/slider/slide-02.png" /></figure>
                     <span class="prev"><i class="fa fa-angle-left fa-4x"></i></span>
                     <span class="next"><i class="fa fa-angle-right fa-4x"></i></span>
                 </div>
@@ -279,10 +279,10 @@
     </div>
 </footer>
 
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/unslider.min.js"></script>
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/scripts.js"></script>
+<script src="/js/unslider.min.js"></script>
 <script type="text/javascript">
     $(function(){
        skip(0);

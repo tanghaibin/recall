@@ -21,7 +21,10 @@
 
 
 	<context:component-scan base-package="top.tanghaibin.recall.controller,top.tanghaibin.recall.context"></context:component-scan>
-	<mvc:annotation-driven></mvc:annotation-driven>
+
+	<!-- 校验器-->
+	<bean id="validater" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"></bean>
+	<mvc:annotation-driven validator="validater"></mvc:annotation-driven>
 
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
 		<property name="proxyTargetClass" value="true" />
