@@ -59,7 +59,6 @@ function bindImage(srcs,event,id){
             var image=new MyImage(scr[i]);
             imageitems.push(image);
         }
-
     }else{
         var is=new MyImage('http://img5.duitang.com/uploads/item/201307/22/20130722192550_4tWsr.thumb.224_0.gif');
         imageitems.push(is);

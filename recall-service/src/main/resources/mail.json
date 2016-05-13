@@ -1,0 +1,13 @@
+{
+  "mail-template":[
+    {
+      "register":"请在{0}分钟内点击以下链接以完成注册：<br/>http://localhost:8080/user/activate?key={1}&token={2}"
+    },
+    {
+      "forget":"验证码为{0}，{1}分钟内有效"
+    },
+    {
+      "timeOut":"10"
+    }
+  ]
+}

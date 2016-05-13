@@ -42,6 +42,11 @@
     <commons.collections.version>3.2</commons.collections.version>
     <!-- validator-->
     <hibernate-validator.version>5.3.0.Alpha1</hibernate-validator.version>
+    <!-- email-->
+    <java-email-version>1.5.0-b01</java-email-version>
+    <spring-mail-version>4.2.5.RELEASE</spring-mail-version>
+    <!-- redis-->
+    <spring-data-redis-version>1.0.2.RELEASE</spring-data-redis-version>
   </properties>
 
 
@@ -67,6 +72,14 @@
         <datasource.maxWait>6000</datasource.maxWait>
         <!-- logs -->
         <log_dir>F:/logs/recall/</log_dir>
+        <!-- mail-->
+        <email-subject>来自Recall的电子邮件</email-subject>
+        <email-host>SMTP.163.com</email-host>
+        <!-- redis-->
+        <redis.hostName>localhost</redis.hostName>
+        <redis.port>6379</redis.port>
+        <redis-timeout>3000</redis-timeout>
+        <redis.database>0</redis.database>
       </properties>
     </profile>
   </profiles>
@@ -233,12 +246,29 @@
       <artifactId>druid</artifactId>
       <version>${druid.version}</version>
     </dependency>
+    <!-- 验证器-->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
     </dependency>
-
+<!--邮件-->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>${java-email-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.integration</groupId>
+      <artifactId>spring-integration-mail</artifactId>
+      <version>${spring-mail-version}</version>
+    </dependency>
+    <!-- redis-->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>${spring-data-redis-version}</version>
+    </dependency>
   </dependencies>
   </dependencyManagement>
 </project>

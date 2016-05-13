@@ -13,7 +13,7 @@
   <nav class="clearfix">
     <div  id="top-div-ul">
       <ul class="clearfix" id="navigate">
-        <li><a href="${ctx}/index.jsp" class="active">主页</a></li>
+        <li><a href="${ctx}/index" class="active">主页</a></li>
         <li><a href="${ctx}/dynamic/toDynamicPage?pageNumber=0&pageSize=10">动态</a></li>
         <li><a href="#">博客</a></li>
         <li><a href="#">相册</a></li>
@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div id="top-login-register-div">
-      <a href="${ctx}/user/login" style="padding-left: 260px;">登录</a>
+      <a href="${ctx}/user/login" style="padding-left: 200px;">登录</a>
       <a href="${ctx}/user/register" style="padding-left: 30px;">注册</a>
     </div>
   </nav>

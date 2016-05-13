@@ -34,7 +34,10 @@
 
     <script type="text/javascript" src="/js/utils.js"></script>
     <script type="text/javascript" src="/js/common/common.js"></script>
-
+    <%--图片弹出层--%>
+    <script src="${ctx}/js/magnific-popup/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="${ctx}/js/magnific-popup/magnific-popup.css">
+    <%--图片弹出层结束--%>
 </head>
 <body>
 <%@include file="../../context/top.jsp" %>
@@ -55,9 +58,12 @@
             <div class="easyui-panel" style="width:700px;height:auto;padding:10px;">
                 <div class="dynamic-content">${data.content}</div>
                 <c:forEach items="${data.picturs}" var="pic" varStatus="count2">
-                    <img class="dynamic-img" id="img${count.index}${count2.index}"/>
+                    <a href="javascript:void(0);" id="a${count.index}${count2.index}"><img class="dynamic-img" id="img${count.index}${count2.index}" /></a>
                     <script type="text/javascript">
                         $("#img${count.index}${count2.index}").attr("src", getFileServerHost(0) + "${pic.address}");
+                        $("#a${count.index}${count2.index}").mouseup(function(){
+                           bindImage($("#img${count.index}${count2.index}").attr("src"),event,$("#a${count.index}${count2.index}").attr("id"));
+                        });
                     </script>
                 </c:forEach>
             </div>

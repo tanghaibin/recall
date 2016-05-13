@@ -26,6 +26,6 @@ public class JsonParser implements Parser {
 		byte [] buf = new byte[1024*1024];
 		inputStream.read(buf);
 		inputStream.close();
-		return new GsonBuilder().disableHtmlEscaping().create().fromJson(new String (buf).trim(),clazz);
+		return new GsonBuilder().disableHtmlEscaping().create().fromJson(new String (buf,"utf-8").trim(),clazz);
 	}
 }

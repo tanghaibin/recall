@@ -19,8 +19,18 @@
 	   http://www.springframework.org/schema/tx
 	   http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<context:component-scan base-package="top.tanghaibin.recall.service"></context:component-scan>
 
-<import resource="applicationContext-shiro.xml"></import>
-<import resource="applicationContext-datasource.xml"></import>
-	<import resource="applicationContext-service.xml"></import>
+<!--集成邮件-->
+	<bean class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="${email-from}"></property>
+		<property name="subject" value="${email-subject}"></property>
+	</bean>
+
+	<bean class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${email-host}"></property>
+		<property name="username" value="${email-username}"></property>
+		<property name="password" value="${email-password}"></property>
+	</bean>
+
 </beans>

@@ -2,6 +2,7 @@ package top.tanghaibin.recall.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -9,6 +10,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
+import top.tanghaibin.exception.BizException;
+import top.tanghaibin.recall.service.UserService;
 import top.tanghaibin.recall.validate.UserCustom;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +30,8 @@ public class UserController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
     private static final String PRIFIX = "user";
+    @Autowired
+    private UserService userService;
 
     /**
      * 跳转到注册页面
@@ -53,7 +58,20 @@ public class UserController {
             modelAndView.setViewName("user/register");
             return modelAndView;
         }
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("login");
         return modelAndView;
+    }
+    @RequestMapping("activate")
+    public ModelAndView activate(String key,String token){
+        ModelAndView modelAndView = new ModelAndView();
+        try {
+            userService.updateStatus(key,token);
+            modelAndView.setViewName("login");
+            return modelAndView;
+        } catch (BizException e) {
+            modelAndView.addObject("msg",e.getMessage());
+            modelAndView.setViewName("error");
+            return modelAndView;
+        }
     }
 }

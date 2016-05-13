@@ -3,6 +3,7 @@
 }
 #top-login-register-div{
     padding-top: 25px;
+    float: right;
 }
 .pullcontainer{
     height: auto;width: 100%;
