@@ -56,9 +56,9 @@ public class BaseServiceImpl implements BaseService{
         String token = RandomUtils.getRandomStr();
         String validateCode = CommonUtil.getSixNum();
         if(type == 0){
-            String aa = MessageFormat.format(register, timeOut, token);
-            mailMessage.setText(MessageFormat.format(register,timeOut,to+":token",token));
-            redisTemplate.opsForValue().set(to + ":token", token,Integer.parseInt(timeOut),TimeUnit.MINUTES);
+            String aa = MessageFormat.format(register, to + ":token", token);
+            mailMessage.setText(MessageFormat.format(register,to+":token",token));
+            redisTemplate.opsForValue().set(to + ":token", token);
         }else if(type == 1){
             mailMessage.setText(MessageFormat.format(forget,validateCode,timeOut));
             redisTemplate.opsForValue().set(to+":validateCode",validateCode,Integer.parseInt(timeOut),TimeUnit.MINUTES);

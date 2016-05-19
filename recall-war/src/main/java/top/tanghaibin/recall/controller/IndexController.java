@@ -1,19 +1,32 @@
 package top.tanghaibin.recall.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.web.session.HttpServletSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import top.tanghaibin.exception.BizException;
+import top.tanghaibin.recall.context.BaseController;
+import top.tanghaibin.recall.entity.User;
 import top.tanghaibin.recall.service.BaseService;
+import top.tanghaibin.utils.CommonUtil;
+
+import javax.servlet.http.HttpSession;
+
 
 /**
  * Created by tangh on 2016/5/11.
  */
 @Controller
-public class IndexController {
+public class IndexController extends BaseController{
     Logger logger = LoggerFactory.getLogger(IndexController.class);
 
     private static final String PRIFIX = "user";
@@ -22,9 +35,12 @@ public class IndexController {
     private BaseService baseService;
 
     @RequestMapping("index")
-    public String toIndexPage(){
-        return "index";
+    public ModelAndView toIndexPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
     }
+
     @RequestMapping("sendMail")
     public ModelAndView sendMail(String mail,Integer type){
         ModelAndView modelAndView = new ModelAndView();
@@ -37,5 +53,36 @@ public class IndexController {
             modelAndView.setViewName("error");
             return modelAndView;
         }
+    }
+    @RequestMapping("login")
+    public ModelAndView login(User user){
+        ModelAndView modelAndView = new ModelAndView();
+        if(CommonUtil.isEmpty(user.getEmail()) || CommonUtil.isEmpty(user.getPswd())){
+            modelAndView.addObject("user",user);
+            modelAndView.addObject("msg","用户名或密码错误");
+            modelAndView.setViewName(PRIFIX + "/login");
+            return modelAndView;
+        }
+        try{
+            Subject subject = SecurityUtils.getSubject();
+            subject.logout();
+            UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken();
+            usernamePasswordToken.setUsername(user.getEmail());
+            usernamePasswordToken.setPassword(user.getPswd().toCharArray());
+            subject.login(usernamePasswordToken);
+            Session session = getCurSession();
+            session.setAttribute("user", getLoginUser());
+        }catch (AuthenticationException e){
+            modelAndView.setViewName("user/login");
+            modelAndView.addObject("msg",e.getMessage());
+            return modelAndView;
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.error(e.getMessage());
+            modelAndView.setViewName("user/login");
+            modelAndView.addObject("msg", HttpStatus.INTERNAL_SERVER_ERROR);
+            return modelAndView;
+        }
+        return toIndexPage();
     }
 }

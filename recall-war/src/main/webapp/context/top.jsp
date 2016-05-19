@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <link rel="stylesheet" type="text/css" href="/css/top.css"/>
 <link rel="stylesheet" type="text/css" href="/css/common/common.css"/>
 <header class="clearfix">
@@ -21,10 +22,12 @@
         <li><a href="#" class="last">联系我</a></li>
       </ul>
     </div>
-    <div id="top-login-register-div">
-      <a href="${ctx}/user/login" style="padding-left: 200px;">登录</a>
-      <a href="${ctx}/user/register" style="padding-left: 30px;">注册</a>
-    </div>
+    <shiro:notAuthenticated>
+      <div id="top-login-register-div">
+        <a href="${ctx}/user/login" style="padding-left: 200px;">登录</a>
+        <a href="${ctx}/user/register" style="padding-left: 30px;">注册</a>
+      </div>
+    </shiro:notAuthenticated>
   </nav>
   <div class="pullcontainer">
     <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>

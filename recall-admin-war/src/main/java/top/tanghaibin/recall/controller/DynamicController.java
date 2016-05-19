@@ -13,7 +13,7 @@ import top.tanghaibin.cons.Constants;
 import top.tanghaibin.entity.Page;
 import top.tanghaibin.exception.BizException;
 import top.tanghaibin.recall.entity.Dynamic;
-import top.tanghaibin.recall.service.DynamicService;
+import top.tanghaibin.recall.service.dynamic.DynamicService;
 
 import java.util.List;
 

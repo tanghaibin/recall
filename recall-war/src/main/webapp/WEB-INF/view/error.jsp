@@ -10,6 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
- ${requestScope.msg}
+<p style="counter-reset: red;"> ${requestScope.msg}</p>
 </body>
 </html>

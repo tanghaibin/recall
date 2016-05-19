@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.tanghaibin.recall.dao.mapper.UserMapper">
+	<resultMap type="top.tanghaibin.recall.entity.User" id="userResultMap">
+  	   <id column="u_id" property="id" />
+  	   <result column="u_username" property="username" />
+  	   <result column="u_pswd" property="pswd" />
+  	   <result column="u_salt" property="salt" />
+  	   <result column="u_pic" property="pic" />
+  	   <result column="u_email" property="email" />
+  	   <result column="u_phone" property="phone" />
+  	   <result column="u_status" property="status" />
+  	   <result column="u_createDate" property="createDate" />
+  	   <result column="u_updateDate" property="updateDate" />
+	</resultMap>
+</mapper>

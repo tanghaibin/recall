@@ -44,5 +44,7 @@
 	<mvc:resources mapping="/fonts/**" location="/fonts/"></mvc:resources>
 	<mvc:resources mapping="/easyui/**" location="/easyui/"></mvc:resources>
 	<mvc:resources mapping="/image/**" location="/image/"></mvc:resources>
+	<mvc:resources mapping="/swiper/**" location="/swiper/"></mvc:resources>
+	<mvc:resources mapping="/ueditor/**" location="/ueditor/"></mvc:resources>
 
 </beans>

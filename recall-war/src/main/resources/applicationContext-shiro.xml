@@ -25,7 +25,7 @@
 	<!-- Shiro的Web过滤器 -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager"/>
-		<property name="loginUrl" value="/login.jsp"/>
+		<property name="loginUrl" value="/user/login"/>
 		<!--<property name="unauthorizedUrl" value="/unauthorized.jsp"/>-->
 		<!--<property name="filters">-->
 		<!--<util:map>-->
@@ -36,6 +36,7 @@
 			<value>
 				/user/login = anon  <!--表示访问这个路径可以匿名使用-->
 				/index.jsp = anon
+				/dynamic/review/add = user
 				<!--/login.jsp = authc-->
 				<!--/** = user   &lt;!&ndash;表示访问这个路径所有资源都必须登录&ndash;&gt;-->
 			</value>

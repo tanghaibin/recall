@@ -21,4 +21,10 @@ public interface UserService {
      */
     void updateStatus(String key,String token)throws BizException;
 
+    /**
+     * 查詢用戶
+     * @param user
+     * @throws BizException
+     */
+    User searchUser(User user) throws BizException;
 }
