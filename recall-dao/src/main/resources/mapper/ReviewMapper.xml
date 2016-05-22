@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="top.tanghaibin.dao.recall.ReviewMapper">
-	<resultMap type="top.tanghaibin.model.entity.recall.Review" id="reviewResultMap">
+<mapper namespace="top.tanghaibin.recall.dao.mapper.ReviewMapper">
+	<resultMap type="top.tanghaibin.recall.entity.Review" id="reviewResultMap">
   	   <id column="r_id" property="id" />
   	   <result column="r_uid" property="uid" />
-  	   <result column="r_review_uid" property="review" />
+  	   <result column="r_review_uid" property="reviewUid" />
   	   <result column="r_type" property="type" />
   	   <result column="r_content" property="content" />
-  	   <result column="r_review_content" property="review" />
+  	   <result column="r_review_content" property="reviewContent" />
   	   <result column="r_resourceId" property="resourceId" />
   	   <result column="r_createDate" property="createDate" />
 	</resultMap>
+
+	<resultMap id="reviewResultMap2" type="top.tanghaibin.recall.entity.Review" extends="reviewResultMap">
+		<association property="user" column="r_uid" select="top.tanghaibin.recall.dao.mapper.UserMapper.selectUserById"></association>
+		<association property="reviewUser" column="r_review_uid" select="top.tanghaibin.recall.dao.mapper.UserMapper.selectUserById"></association>
+	</resultMap>
+	<select id="selectReviewByFK" parameterType="int" resultMap="reviewResultMap2">
+		SELECT * FROM re_review WHERE r_resourceId = #{_parameter} ORDER BY r_createDate
+	</select>
 </mapper>

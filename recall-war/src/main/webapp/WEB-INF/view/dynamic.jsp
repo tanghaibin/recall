@@ -13,6 +13,7 @@
     <title>Infusion WP Theme</title>
     <link href="${ctx}/css/dynamic/dynamic.css" rel="stylesheet">
     <link href="${ctx}/css/common/common.css" rel="stylesheet">
+    <link href="${ctx}/css/styles.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${ctx}/css/styles.css">
@@ -96,11 +97,7 @@
     <!-- Swiper JS -->
     <script src="/swiper/swiper.min.js"></script>
 </head>
-
-<body>
-
-
-
+<body style="background: url('/image/102976_bg1.png');">
 <div id="zz" style="width: 100%; height: 100%; z-index: 999; background: rgba(0, 0, 0, 0.42); position: absolute;display: none ">
     <a href="javascript:void(0);"><img style="position: relative;width:50px;height:50px;float:right;top:50px;right:50px;z-index: 1000" src="/img/x.png" onclick="myClose()"/></a>
     <%--<div style="position: relative;text-align: center;top:20%">--%>
@@ -117,6 +114,11 @@
 
 
 <%@include file="../../context/top.jsp" %>
+
+<div style="width: 100%;height:300px;background: url('/image/top-image3.jpg');">&nbsp;</div>
+<div style="width: 100%;height:50px;background: url('/image/102976_menu_bg.png');">&nbsp;</div>
+
+
 <div id="dynamic-container">
     <c:forEach items="${requestScope.data.rows}" var="data" varStatus="count">
         <div class="dynamic div" id="div${count.index}">
@@ -125,7 +127,7 @@
                     <img width="60px" height="60px" src="${ctx}/image/head.png"/>
                 </div>
                 <div style="margin-left: 100px;">
-                    <span class="nick-name">南汐寒笙</span>
+                    <span class="nick-name">南汐寒笙</span><br/>
                     <span class="create-date" id="create-date${count.index}">
                         <fmt:formatDate value="${data.createDate}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
                     </span>
@@ -175,10 +177,14 @@
             </div>
 
             <div id="review-div-content" class="easyui-panel" style="width:700px;height:auto;padding:10px;background: #FAFAFA;">
-                    <div style="float:left"><b style="color:#A4B3C3 ">小明</b> 回复：今天天气好！</div><label></label><div></div>
-                    <div><b style="color:#A4B3C3 ">小红</b> 回复 <b style="color:#A4B3C3 ">小明</b>：是啊！如果能出去玩就好了</div><br/>
-                    <div>小明 回复 小红：我今天不上班；在外面晒太阳呢</div><br/>
-                    <div>小红 回复 小明：那你多幸福啊；真让我羡慕</div>
+                <c:forEach items="${data.reviews}" var="review">
+                    <c:if test="${review.type==0}">
+                        <div style="float:none;"><b style="color:#A4B3C3">${review.user.username}</b><b></b> :${review.content}<input type="hidden" value="${review.user.id}"/><label style="position: relative;top:10px;"></label><div></div></div>
+                    </c:if>
+                    <c:if test="${review.type==1}">
+                        <div><b style="color:#A4B3C3 ">${review.reviewUser.username}</b> 回复 <b style="color:#A4B3C3 ">${review.user.username}</b>：${review.reviewContent}<input type="hidden" value="${review.reviewUser.id}"/><label style="position: relative;top:10px;"></label><div></div></div>
+                    </c:if>
+                </c:forEach>
             </div>
         <script type="text/javascript">
             if ("${count.index}" > 0) {
@@ -231,9 +237,33 @@
     <a id="publish-review-btn" href="javascript:void(0);" class="easyui-linkbutton" style="width: 90px;height: 40px;position: relative;top: 5px;right:-570px;border-radius: 7px;">发 表</a>
 </div>
 
-<div id="login-dialog" style="display: none;z-index:1000;width: 80%;height: 80%;position: absolute;top:80px;left:140px;background: rgba(0, 0, 0, 0.42);">
-    22222
-    <a href="javascript:void(0);"><img style="position: relative;width:50px;height:50px;float:right;top:50px;right:50px;z-index: 1000" src="/img/x.png" onclick="login_dialog_close()"/></a>
+<div id="login-dialog" style="display: none;z-index:1000;width: 30%;height: 41%;position: absolute;top:20%;left:35%;">
+    <%--<a href="javascript:void(0);"><img style="position: relative;width:50px;height:50px;float:right;top:50px;right:50px;z-index: 1000" src="/img/x.png" onclick="login_dialog_close()"/></a>--%>
+    <!-- contact-form -->
+    <div class="message warning">
+        <div class="inset">
+            <div class="login-head">
+                <h1>Sign in to Recall</h1>
+                <div class="alert-close"> </div>
+            </div>
+            <form id="login-form">
+                <li>
+                    <input type="text" class="easyui-validatebox" data-options="required:true,validType:'email'" placeHolder="邮箱"><a href="#" class=" icon user"></a>
+                </li>
+                <%--<div class="clear"> </div>--%>
+                <li>
+                    <input type="password" class="easyui-validatebox" data-options="required:true" placeHolder="密码"> <a href="#" class="icon lock"></a>
+                </li>
+                <div class="clear"> </div>
+                <div class="submit">
+                    <input type="submit" id="login-btn" value="登 录" >
+                    <h4><a href="#">忘记密码 ?</a></h4>
+                    <div class="clear">  </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
     <script type="text/javascript">
         /**
@@ -242,6 +272,8 @@
         var ue = UE.getEditor('editor');
         var type = 0;//评论动态还是评论：0动态1评论
         var dynamic_id = null;//动态id
+        var uid = null;//评论人id
+        var reviewname = null;//评论人昵称
         $(function(){
             regEvent();
         });
@@ -256,15 +288,24 @@
                     return false;
                 }
                 var data = null;
-                var content = ue.getContent();
-                data = {"content":content,"resourceId":dynamic_id,"type":type};
+                var content = ue.getPlainTxt();
+                if(type == 0){
+
+                    data = {"content":content,"resourceId":dynamic_id,"type":type};
+                }
+                else if(type == 1){
+                    data = {"content":content,"resourceId":dynamic_id,"type":type,"uid":uid};
+                }
                 publishReview(data);
             });
 
+            $(".alert-close").click(function(){
+                $('#login-dialog').slideUp('slow', function() {
+                    // Animation complete.
+                });
+            });
 
             //循环注册点击评论事件
-            var count = 0;
-            var cur = null;
             $.each($(".ul-inline"),function(){
                 var obj = $(this);
                 obj.find("li:first").click(function(){
@@ -276,7 +317,7 @@
                         return;
                     }
                     type = 0;
-                    var li_id = $(obj.find("li:first")).attr("id");
+                    var li_id = $(obj).find("li:first").attr("id");
                     dynamic_id = li_id.substr(li_id.lastIndexOf("-")+1,li_id.length);
                     obj.parent().parent().next().append($("#review-ueditor"));
                     //$("#review-ueditor").css("display","inline");
@@ -285,9 +326,7 @@
                     });
                 });
             });
-
-
-            //循环注册在评论中点击评论图标事件
+            //循环注册评论中评论图标点击事件
             $.each($("div[id='review-div-content'] label"),function(){
                 $(this).click(function(){
                     var obj = $(this);
@@ -298,7 +337,11 @@
                         return;
                     }
                     $(this).next().append($("#review-ueditor"));
+                    var li_id = $(this).parent().parent().parent().prev().children().find("ul li").eq(0).attr("id");
+                    dynamic_id = li_id.substr(li_id.lastIndexOf("-")+1,li_id.length);
                     type = 1;
+                    uid = obj.prev().val();
+                    reviewname = $(this).prev().prev().prev().html();
                     $('#review-ueditor').slideDown('slow', function() {
                         //ue.setContent("<b style='color:#EEEEEE'>回复"+ obj.prev().children().html()+"：</b>",false);
                     });
@@ -306,24 +349,81 @@
             });
         }
 
+        //注册新增的评论事件
+        function regeReviewEvent(obj){
+                if($(obj).next().children().attr("id") == "review-ueditor" && $(obj).next().children().css("display") != "none"){
+                    //$(this).parent().parent().next().css("display","none");
+                    $('#review-ueditor').slideUp('slow', function() {
+                        // Animation complete.
+                    });
+                    return;
+                }
+                type = 1;
+                var li_id = $(obj).parent().parent().parent().prev().children().find("ul li:first").attr("id")+"";
+                dynamic_id = li_id.substring(li_id.lastIndexOf("-")+1,li_id.length);
+                $(obj).next().append($("#review-ueditor"));
+           // ue.setContent("");
+                //$("#review-ueditor").css("display","inline");
+                $('#review-ueditor').slideDown('slow', function() {
+                    // Animation complete.
+                });
+        }
+
+        function regeReviewInnerReview(obj){
+            if($(obj).next().children().attr("id") == "review-ueditor" && $(obj).next().children().css("display")!="none"){
+                $('#review-ueditor').slideUp('slow', function() {
+                    // Animation complete.
+                });
+                return;
+            }
+            $(obj).next().append($("#review-ueditor"));
+            var li_id = $(obj).parent().parent().parent().prev().children().find("ul li").eq(0).attr("id")+"";
+            dynamic_id = li_id.substring(li_id.lastIndexOf("-")+1,li_id.length);
+            type = 1;
+            uid = $(obj).prev().val();
+            reviewname = $(obj).prev().prev().prev().html();
+            $('#review-ueditor').slideDown('slow', function() {
+                //ue.setContent("<b style='color:#EEEEEE'>回复"+ obj.prev().children().html()+"：</b>",false);
+            });
+        }
         /**
         *关闭登录框
          */
         function login_dialog_close(){
-            $("#login-dialog").slideUp("slow",function(){});
+            $(".login-dialog").slideUp("slow",function(){});
         }
 
         /**
         *发布评论
         * @param data
          */
-        function publishReview(data){
+        function publishReview(json){
             $.ajax({
                 url:'${ctx}/dynamic/review/add',
                 type:'POST',
-                data:data,
+                data:json,
                 success: function(data){
-                    $("#login-dialog").slideDown("slow",function(){});
+                    //$("#login-dialog").slideDown("slow",function(){});
+                    if(data=="提交成功"){
+                        $('#review-ueditor').slideUp('slow', function() {
+                            // Animation complete.
+                        });
+                        var random = Math.random();
+                        if(type==0){
+                            var dom = $("#review-icon-"+dynamic_id).parent().parent().parent().next().children();
+                            var element = dom[0];
+                           // var element = $("#review-icon-"+dynamic_id).parent().parent().parent().next().children().find("div:last").eq(0);
+                            var html = "<div style='float:none;'><b style='color:#A4B3C3 '>${sessionScope.user.username}</b> :"+json.content+"<input type='hidden' value='${sessionScope.user.id}'/><label onclick='regeReviewEvent(this)' style='position: relative;top:10px;'></label><div></div></div>";
+                            $(element).append(html);
+                        }else if(type == 1){
+                            var dom = $("#review-icon-"+dynamic_id).parent().parent().parent().next().children().children();
+                            var element = dom[dom.length-1];
+                            var html = "<div><b style='color:#A4B3C3 '>${sessionScope.user.username}</b> 回复 <b style='color:#A4B3C3 '>"+reviewname+"</b>："+json.content+"<input type='hidden' value='${sessionScope.user.id}'/><label onclick='regeReviewInnerReview(this)' style='position: relative;top:10px;'></label><div></div></div>";
+                            $(element).after(html);
+                        }
+                        return;
+                    }
+                    window.location = '${ctx}/user/login';
                 },
                 error:function(e){
                     $.messager.alert("提示", e.responseText);

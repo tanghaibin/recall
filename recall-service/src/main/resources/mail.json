@@ -1,7 +1,7 @@
 {
   "mail-template":[
     {
-      "register":"请点击以下链接以完成注册：<br/>http://localhost:8080/user/activate?key={0}&token={1}"
+      "register":"请点击以下链接以完成注册：<br/>http://192.168.0.102:8080/user/activate?key={0}&token={1}"
     },
     {
       "forget":"验证码为{0}，{1}分钟内有效"

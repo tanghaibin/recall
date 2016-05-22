@@ -37,7 +37,18 @@ public class User implements Serializable{
   	  private Date createDate; // 创建时间
       @Column(name = "u_updateDate")
   	  private Date updateDate; // 更新时间
-
+		@Column(name="u_hobby")
+		private String hobby;//爱好
+	@Column(name="u_birthday")
+	private Date birthday;//生日
+	 @Column(name="u_hometown")
+	private String hometown;//故乡
+	 @Column(name="u_profession")
+	private String profession;//职业
+	 @Column(name="u_name")
+	private String name;//姓名
+	 @Column(name="u_description")
+	private String description;//个人描述
 	/**
 	   * 
 	   * @return id
@@ -178,4 +189,52 @@ public class User implements Serializable{
 	  public void setUpdateDate(Date updateDate){
 	    this.updateDate = updateDate;
 	  }
+
+	public String getHobby() {
+		return hobby;
+	}
+
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public String getHometown() {
+		return hometown;
+	}
+
+	public void setHometown(String hometown) {
+		this.hometown = hometown;
+	}
+
+	public String getProfession() {
+		return profession;
+	}
+
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

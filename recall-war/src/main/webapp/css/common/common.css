@@ -20,3 +20,6 @@ a:hover{
     /*border: 1px solid #e6e6e6;*/
     height: 50px;
 }
+body{
+    font-family: '微软雅黑';
+}

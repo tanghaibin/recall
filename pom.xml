@@ -13,6 +13,7 @@
     <module>recall-dao</module>
     <module>recall-admin-war</module>
     <module>recall-sdk</module>
+    <module>recall-client-war</module>
   </modules>
 
 

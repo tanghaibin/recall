@@ -12,5 +12,15 @@
   	   <result column="u_status" property="status" />
   	   <result column="u_createDate" property="createDate" />
   	   <result column="u_updateDate" property="updateDate" />
+  	   <result column="u_hobby" property="hobby" />
+  	   <result column="u_birthday" property="birthday" />
+  	   <result column="u_hometown" property="hometown" />
+  	   <result column="u_profession" property="profession" />
+  	   <result column="u_name" property="name" />
+  	   <result column="u_description" property="description" />
 	</resultMap>
+
+	<select id="selectUserById" parameterType="int" resultMap="userResultMap">
+		SELECT u_id,u_username FROM re_user WHERE u_id = #{_parameter}
+	</select>
 </mapper>

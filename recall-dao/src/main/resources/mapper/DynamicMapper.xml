@@ -10,6 +10,7 @@
 
 	<resultMap type="top.tanghaibin.recall.entity.Dynamic" id="dynamicResultMap2" extends="dynamicResultMap">
 		<collection property="picturs" column="d_id" select="top.tanghaibin.recall.dao.mapper.PictursMapper.selectDynamicPicByFK"></collection>
+		<collection property="reviews" column="d_id" select="top.tanghaibin.recall.dao.mapper.ReviewMapper.selectReviewByFK"></collection>
 	</resultMap>
 
 	<select id="selectDynamicPage" resultMap="dynamicResultMap2">

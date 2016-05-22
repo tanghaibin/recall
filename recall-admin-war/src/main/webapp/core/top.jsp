@@ -36,8 +36,9 @@
 
 <ul class="nav">
   <li><a href="#"  onclick="javascript:setLeftNavValue(0,'系统管理'); return false;"  class="selected" target="rightFrame"><img src="${ctx}/images/icon02.png" title="系统管理" /><h2>系统管理</h2></a></li>
-  <li><a href="#" onclick="javascript:setLeftNavValue(1,'动态管理');return false;"  target="rightFrame"><img src="${ctx}/images/icon03.png" title="会员管理" /><h2>动态管理</h2></a></li>
-  <li><a href="#" onclick="javascript:setLeftNavValue(2,'博客管理');return false;"  target="rightFrame"><img src="${ctx}/images/icon04.png" title="商户商品管理" /><h2>博客管理</h2></a></li>
+  <li><a href="#" onclick="javascript:setLeftNavValue(1,'动态管理');return false;"  target="rightFrame"><img src="${ctx}/images/icon03.png" title="动态管理" /><h2>动态管理</h2></a></li>
+  <li><a href="#" onclick="javascript:setLeftNavValue(2,'博客管理');return false;"  target="rightFrame"><img src="${ctx}/images/icon04.png" title="博客管理" /><h2>博客管理</h2></a></li>
+  <li><a href="#" onclick="javascript:setLeftNavValue(3,'个人资料');return false;"  target="rightFrame"><img src="${ctx}/images/icon04.png" title="个人资料" /><h2>个人资料</h2></a></li>
 </ul>
 
 <div class="topright">

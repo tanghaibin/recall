@@ -34,7 +34,8 @@
     }else if(parentId==2){
 
     }else if(parentId==3){
-
+      navStr += " <li><cite></cite><a href='${ctx}/dynamic/toAddDynamicPage' target='rightFrame'>基本资料</a><i></i></li>";
+      navStr += " <li><cite></cite><a href='${ctx}/dynamic/toAddDynamicPage' target='rightFrame'>修改密码</a><i></i></li>";
     }
 
     navStr += "</ul>";

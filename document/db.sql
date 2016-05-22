@@ -12,7 +12,13 @@ CREATE TABLE re_user(
   u_phone VARCHAR(11) COMMENT '手机号',
   u_status TINYINT COMMENT '状态0未激活1已激活3已锁定',
   u_createDate DATETIME COMMENT '创建时间',
-  u_updateDate DATETIME COMMENT '更新时间'
+  u_updateDate DATETIME COMMENT '更新时间',
+  u_hobby VARCHAR(200) COMMENT '爱好',
+  u_birthday DATETIME COMMENT '生日',
+  u_hometown VARCHAR(40) COMMENT '故乡',
+  u_profession VARCHAR(20) COMMENT '职业',
+  u_name VARCHAR(20) COMMENT '姓名',
+  u_description VARCHAR(100) COMMENT '个人描述'
 );
 /**
 * 动态表

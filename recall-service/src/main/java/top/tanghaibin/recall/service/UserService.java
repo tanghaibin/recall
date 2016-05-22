@@ -27,4 +27,25 @@ public interface UserService {
      * @throws BizException
      */
     User searchUser(User user) throws BizException;
+
+    /**
+     * 更新用户
+     * @param user
+     * @throws BizException
+     */
+    void updateUser(User user) throws BizException;
+
+    /**
+     * 更新密码
+     * @param user
+     * @throws BizException
+     */
+    void updatePswd(User user,String oldPswd) throws BizException;
+
+    /**
+     * 忘记密码
+     * @param user
+     * @throws BizException
+     */
+    void updatePswd2(User user,String code) throws BizException;
 }

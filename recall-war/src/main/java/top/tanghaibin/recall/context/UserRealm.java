@@ -56,6 +56,7 @@ public class UserRealm extends AuthorizingRealm {
         try {
             user = userService.searchUser(user);
         } catch (BizException e) {
+            e.printStackTrace();
             throw new AuthenticationException(e.getMessage());
         }
         if(user == null){

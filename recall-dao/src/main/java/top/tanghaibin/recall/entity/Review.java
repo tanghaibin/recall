@@ -33,44 +33,65 @@ public class Review implements Serializable{
   	  private Integer resourceId; // 来源id
       @Column(name = "r_createDate")
   	  private Date createDate; // 创建时间
-  	  /**
-	   * 
-	   * @return id
-	   */
-	  public Integer getId(){
-	   return id;
-	  }
-	  /**
-	   * 
-	   * @param id 
-	   */
-	  public void setId(Integer id){
-	    this.id = id;
-	  }
-  	  /**
-	   * 用户id
-	   * @return uid
-	   */
-	  public Integer getUid(){
-	   return uid;
-	  }
-	  /**
-	   * 用户id
-	   * @param uid 
-	   */
-	  public void setUid(Integer uid){
-	    this.uid = uid;
-	  }
-  	  /**
-	   * 回复评论的用户id
-	   * @return review
-	   */
+	@Transient
+	private User user;//评论动态的user
+	 @Transient
+	private User reviewUser;//评论动态评论的user
+
+	public User getReviewUser() {
+		return reviewUser;
+	}
+
+	public void setReviewUser(User reviewUser) {
+		this.reviewUser = reviewUser;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getUid() {
+		return uid;
+	}
+
+	public void setUid(Integer uid) {
+		this.uid = uid;
+	}
+
 	public Integer getReviewUid() {
 		return reviewUid;
 	}
 
 	public void setReviewUid(Integer reviewUid) {
 		this.reviewUid = reviewUid;
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public String getReviewContent() {
@@ -81,61 +102,19 @@ public class Review implements Serializable{
 		this.reviewContent = reviewContent;
 	}
 
-	/**
-	   * 类型0回复动态1回复评论
-	   * @return type
-	   */
-	  public Integer getType(){
-	   return type;
-	  }
-	  /**
-	   * 类型0回复动态1回复评论
-	   * @param type 
-	   */
-	  public void setType(Integer type){
-	    this.type = type;
-	  }
-  	  /**
-	   * 评论内容
-	   * @return content
-	   */
-	  public String getContent(){
-	   return content;
-	  }
-	  /**
-	   * 评论内容
-	   * @param content 
-	   */
-	  public void setContent(String content){
-	    this.content = content;
-	  }
+	public Integer getResourceId() {
+		return resourceId;
+	}
 
-  	  /**
-	   * 来源id
-	   * @return resourceId
-	   */
-	  public Integer getResourceId(){
-	   return resourceId;
-	  }
-	  /**
-	   * 来源id
-	   * @param resourceId 
-	   */
-	  public void setResourceId(Integer resourceId){
-	    this.resourceId = resourceId;
-	  }
-  	  /**
-	   * 创建时间
-	   * @return createDate
-	   */
-	  public Date getCreateDate(){
-	   return createDate;
-	  }
-	  /**
-	   * 创建时间
-	   * @param createDate 
-	   */
-	  public void setCreateDate(Date createDate){
-	    this.createDate = createDate;
-	  }
+	public void setResourceId(Integer resourceId) {
+		this.resourceId = resourceId;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 }

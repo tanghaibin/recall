@@ -9,5 +9,7 @@
 	<mappers>
 		<mapper resource="mapper/DynamicMapper.xml"></mapper>
 		<mapper resource="mapper/PictursMapper.xml"></mapper>
+		<mapper resource="mapper/ReviewMapper.xml"></mapper>
+		<mapper resource="mapper/UserMapper.xml"></mapper>
 	</mappers>
 </configuration>
