@@ -122,18 +122,18 @@
 <div id="dynamic-container">
     <c:forEach items="${requestScope.data.rows}" var="data" varStatus="count">
         <div class="dynamic div" id="div${count.index}">
-            <div class="easyui-panel" style="width:700px;height:auto;padding:10px;">
+            <div class="easyui-panel" data-options="border:false" style="width:700px;height:auto;">
                 <div style="float: left">
-                    <img width="60px" height="60px" src="${ctx}/image/head.png"/>
+                    <img width="60px" height="60px" src="${ctx}/image/head.png" id="head-pic"/>
                 </div>
-                <div style="margin-left: 100px;">
+                <div style="margin-left: 100px;margin-top: 8px;">
                     <span class="nick-name">南汐寒笙</span><br/>
                     <span class="create-date" id="create-date${count.index}">
                         <fmt:formatDate value="${data.createDate}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
                     </span>
                 </div>
             </div>
-            <div class="easyui-panel" style="width:700px;height:auto;padding:10px;">
+            <div class="easyui-panel"  style="width:700px;height:auto;padding:10px;">
                 <div class="dynamic-content">${data.content}</div>
                 <c:forEach items="${data.picturs}" var="pic" varStatus="count2">
                     <a href="javascript:void(0);" id="a${count.index}${count2.index}"><img class="dynamic-img" id="img${count.index}${count2.index}" /></a>
@@ -168,7 +168,7 @@
                 </c:forEach>
             </div>
 
-            <div id="dynamic-option-div" class="easyui-panel" style="width:700px;height:auto;padding:10px;background: #FAFAFA;">
+            <div id="dynamic-option-div" class="easyui-panel" data-options="border:false" style="width:700px;height:auto;padding:1px;background: #FAFAFA;">
                 <ul class="ul-inline"><div style="background: url('/img/icon.png');background-position: -224px -106px;width: 16px;height: 16px;"></div>
                     <li id="review-icon-${data.id}"><label>评论</label></li><div style="background: url('/img/icon.png');background-position: -224px -26px;width: 16px;height: 16px;"></div>
                     <li><label>赞</label></li><div style="background: url('/img/icon.png');background-position: -224px -130px;width: 16px;height: 16px;"></div>

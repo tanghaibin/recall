@@ -6,6 +6,7 @@
     font-family: 微软雅黑;
     color:black;
     font-size: 15px;
+    cursor: pointer;
 }
 .create-date{
     font-family: 微软雅黑;
@@ -37,6 +38,7 @@
 #dynamic-option-div label{
     cursor: pointer;
 }
+
 /*登录弹出框*/
 
 /*

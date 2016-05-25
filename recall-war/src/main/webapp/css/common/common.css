@@ -23,3 +23,7 @@ a:hover{
 body{
     font-family: '微软雅黑';
 }
+#head-pic{
+    border-radius: 50px;
+    cursor: pointer;
+}
