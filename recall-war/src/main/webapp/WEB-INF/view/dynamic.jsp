@@ -115,7 +115,10 @@
 
 <%@include file="../../context/top.jsp" %>
 
-<div style="width: 100%;height:300px;background: url('/image/top-image3.jpg');">&nbsp;</div>
+<div style="width: 100%;height:300px;background: url('/image/top-image3.jpg');">
+    <div style="color: white;font-size: 25px;position: relative;left: 20%;top: 5%">南汐寒笙</div><br/>
+    <div style="color: white;font-size: 15px;position: relative;left: 20%;top: 2%">http://www.tanghaibin.com/dynamic</div><br/>
+</div>
 <div style="width: 100%;height:50px;background: url('/image/102976_menu_bg.png');">&nbsp;</div>
 
 
