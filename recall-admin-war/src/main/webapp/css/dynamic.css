@@ -1,0 +1,19 @@
+#rotate{
+    position: relative;
+    left: 5%;
+}
+#relese-div{
+    position: relative;
+    left: 78%;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #eee;
+    padding-top: 1%;
+    transition:background-color .5s ease-in;
+}
+#relese-div:hover{
+    background-color: #00A2D4;
+}

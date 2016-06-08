@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="../../../context/context.jsp"%>
 <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>动态列表</title>
@@ -31,11 +31,12 @@
     <script src="${ctx}/uploader/webuploader.min.js" type="text/javascript" charset="UTF-8"></script>
     <%--旋转条--%>
     <script src="${ctx}/js/cvi_busy_lib.js"></script>
+    <link href="${ctx}/css/dynamic.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <%--<body>--%>
 <div id="rotate">
-    <div style="margin-left: 200px;">
+    <div>
         <script id="editor" type="text/plain" style="width:1024px;height:300px;"></script>
         <div class="easyui-panel" id="picturs-panal" style="width:1024px;height:auto;">
             <div id="uploader" class="wu-example">
@@ -71,8 +72,8 @@
                 </div>
             </div>
         </div>
-        <div style="float: right;margin-right: 270px;margin-top:20px;" onclick="release()">
-            <a href="#" class="easyui-linkbutton" style="width:100px;height:50px;border-radius: 5px;">发布动态</a>
+        <div id="relese-div" onclick="release()">
+            发布动态
         </div>
     </div>
 <%--</body>--%>
@@ -153,7 +154,7 @@
                 lval.remove();
             },
             error:function(e){
-                $.messager.alert("错误", e.responseText);
+                alert(e.responseText);
                 lval.remove();
             }
         })

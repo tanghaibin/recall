@@ -13,6 +13,7 @@ import tk.mybatis.mapper.util.StringUtil;
 import top.tanghaibin.cons.Constants;
 import top.tanghaibin.string.RandomUtils;
 import top.tanghaibin.utils.CommonUtil;
+import top.tanghaibin.utils.DateUtils;
 
 import java.io.*;
 import java.net.URL;
@@ -55,16 +56,17 @@ public class UploadController {
         if(null == file) return new ResponseEntity<String>(Constants.EX_PARAM, HttpStatus.BAD_REQUEST);
         try {
             String filename = file.getOriginalFilename();
+            String currentDate = DateUtils.DATE_PATTERN();
             String newImageName = RandomUtils.getRandomStr()+filename.substring(filename.lastIndexOf("."), filename.length());
-            File dir = new File(imagePath+"recall//");
+            File dir = new File(imagePath+File.separator+"recall"+File.separator+currentDate+File.separator);
             if(dir.isDirectory()){
                 if(!dir.exists()){
                     dir.mkdir();
                 }
             }
-            File outFile = new File(imagePath+"recall//"+newImageName);
+            File outFile = new File(imagePath+File.separator+"recall"+File.separator+currentDate+File.separator+newImageName);
             FileUtils.copyInputStreamToFile(file.getInputStream(),outFile);
-            return new ResponseEntity<String>("recall/"+newImageName,HttpStatus.OK);
+            return new ResponseEntity<String>("recall/"+currentDate+"/"+newImageName,HttpStatus.OK);
         } catch (Exception e) {
             logger.error(e.getMessage());
             return new ResponseEntity<String>(Constants.EX_APP,HttpStatus.INTERNAL_SERVER_ERROR);
