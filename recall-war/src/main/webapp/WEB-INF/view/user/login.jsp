@@ -4,39 +4,77 @@
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@include file="/context/context.jsp" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE>
+<html>
 
 <head>
 	<title>登录</title>
 		<meta charset="utf-8">
 		<link href="../../../css/login.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="${ctx}/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/js/login.js"></script>
+	<script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
 </head>
-<body>
-	 <!-----start-main---->
-	 <div class="main">
-		<div class="login-form">
-			<h1>Sign in to Recall</h1>
-
-					<div class="head">
-						<img src="../../../image/user.png" alt=""/>
-					</div>
-
-				<form:form action="${ctx}/login">
-						<p style="color: red">${requestScope.msg}</p><br/>
-						<input type="text" class="text" name="email" value="${requestScope.user.email}"  />
-						<input type="password" name="pswd" value="${requestScope.user.pswd}"/>
-						<div class="submit">
-							<input type="submit" onclick="myFunction()" value="LOGIN" >
-					</div>	
-					<p><a href="#">Forgot Password ?</a></p>
-				</form:form>
+<br>
+	<form action="${ctx}/login" method="post" id="login-form">
+		<div id="content-div">
+			<div id="top-div">
+				<div id="login-div" class="selected-type">快速登录</div>
+				<div id="regist-div" class="selected-type">快速注册</div>
 			</div>
+			<canvas id="canvas"></canvas>
 		</div>
-			 <!-----//end-main---->
-		 		
- 
+	</form>
+
+
+<div id="login-content-div" style="display: none">
+	<label>${msg}</label>
+	<div class="input-div">
+		账号：<input type="email" name="email" required="required" value="${user.email}"/>
+	</div>
+	<div class="input-div">
+		密码：<input type="password" name="pswd" required="required" value="${user.pswd}"/>
+	</div>
+	<div id="login-btn">登 录</div>
+</div>
+<div id="register-content-div" style="display: none">
+	<label>${msg}</label>
+	<div class="input-div">
+		&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input type="text" name="username"  value="${user.username}" class="easyui-validatebox" data-options="required:true,validType:'length[1,10]'"/>
+	</div>
+	<div class="input-div">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号：<input type="email" name="email"  value="${user.email}" class="easyui-validatebox" data-options="required:true,validType:'email'"/>
+	</div>
+	<div class="input-div">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="pswd"  value="${user.pswd}" class="easyui-validatebox" data-options="required:true,validType:'length[3,10]'"/>
+	</div>
+	<div class="input-div">
+		确认密码：<input type="password" name="confirmPswd" value="${user.confirmPswd}" class="easyui-validatebox" data-options="required:true,validType:{length:[3,10],equals:['#password']}"/>
+	</div>
+	<div id="register-btn">注 册</div>
+</div>
+
+<script type="text/javascript">
+
+	if('${type}' != ''){
+		displayLoginContent(${type});
+	}else{
+		displayLoginContent(${1});
+	}
+
+
+	$.extend($.fn.validatebox.defaults.rules, {
+		equals: {
+			validator: function(value,param){
+				return value == $(param[0]).val();
+			},
+			message: '确认密码必须与原密码匹配'
+		}
+	});
+</script>
+<style type="text/css">
+
+</style>
 </body>
 </html>

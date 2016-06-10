@@ -19,6 +19,7 @@ import top.tanghaibin.exception.BizException;
 import top.tanghaibin.recall.context.BaseController;
 import top.tanghaibin.recall.entity.User;
 import top.tanghaibin.recall.service.BaseService;
+import top.tanghaibin.recall.validate.UserCustom;
 import top.tanghaibin.utils.CommonUtil;
 
 
@@ -57,8 +58,11 @@ public class IndexController extends BaseController{
     @RequestMapping("login")
     public ModelAndView login(User user){
         ModelAndView modelAndView = new ModelAndView();
+        UserCustom userCustom = new UserCustom();
+        userCustom.setEmail(user.getEmail());
+        userCustom.setPswd(user.getPswd());
         if(CommonUtil.isEmpty(user.getEmail()) || CommonUtil.isEmpty(user.getPswd())){
-            modelAndView.addObject("user",user);
+            modelAndView.addObject("user",userCustom);
             modelAndView.addObject("msg","用户名或密码错误");
             modelAndView.setViewName(PRIFIX + "/login");
             return modelAndView;
@@ -75,12 +79,16 @@ public class IndexController extends BaseController{
         }catch (AuthenticationException e){
             modelAndView.setViewName("user/login");
             modelAndView.addObject("msg",e.getMessage());
+            modelAndView.addObject("user",userCustom);
+            modelAndView.addObject("type",1);
             return modelAndView;
         }catch (Exception e){
             e.printStackTrace();
             logger.error(e.getMessage());
             modelAndView.setViewName("user/login");
             modelAndView.addObject("msg", HttpStatus.INTERNAL_SERVER_ERROR);
+            modelAndView.addObject("user",userCustom);
+            modelAndView.addObject("type",1);
             return modelAndView;
         }
         return toIndexPage();

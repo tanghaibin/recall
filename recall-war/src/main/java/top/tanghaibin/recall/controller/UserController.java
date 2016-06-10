@@ -60,7 +60,9 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         if(bindingResult.hasErrors()){
             modelAndView.addObject("userCustom",userCustom);
-            modelAndView.setViewName("user/register");
+            modelAndView.setViewName("user/login");
+            modelAndView.addObject("user",userCustom);
+            modelAndView.addObject("type",0);//用于登录界面区分是注册还是登录
             return modelAndView;
         }
         User user = new User();
@@ -73,11 +75,16 @@ public class UserController {
         } catch (BizException e) {
             modelAndView.setViewName("error");
             modelAndView.addObject("msg",e.getMessage());
+            modelAndView.addObject("user",userCustom);
+            modelAndView.addObject("type",0);//用于登录界面区分是注册还是登录
+            modelAndView.setViewName(PRIFIX + "/login");
             return modelAndView;
         }catch (Exception e){
             logger.error(e.getMessage());
             modelAndView.setViewName("error");
             modelAndView.addObject("msg", HttpStatus.INTERNAL_SERVER_ERROR);
+            modelAndView.addObject("user",userCustom);
+            modelAndView.setViewName(PRIFIX + "/login");
             return modelAndView;
         }
         modelAndView.setViewName(PRIFIX + "/login");

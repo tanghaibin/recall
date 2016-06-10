@@ -1,26 +1,44 @@
+#logo-div{
+    margin-left: 30%;
+    width: 5%;
+    height: 10px;
+}
 #top-div{
-    width: 100%;
+    width: 99.8%;
     height:50px;
     background: url('/image/102976_menu_bg.png');
-}
-#top-div div{
-    float: left;
     position: relative;
-    margin-left: 20px;
-    width: 80px;
-    height: 50px;
-    text-align: center;
+    left: 1px;
 }
-#top-div div:hover{
-    background: #C9B61c;
-    cursor:pointer;
+#top-div div:not(#login-regist-div){
+    position: relative;
+    float: left;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    padding-left: 8px;
+    padding-top: 8px;
+    margin-left: 3%;
+    margin-top: 0.5%;
+    transition:background-color .5s ease-in;
+    cursor: pointer;
+}
+#top-div div:not(#login-regist-div):hover{
+    background-color: #BFAB86;
 }
 #top-div div a{
+    text-decoration: none;
     color: white;
-    font-family: '微软雅黑';
+}
+#login-regist-div{
     position: relative;
-    left: 60%;
-    top: 30%;
-    margin-left: -100px;
-    margin-top: -100px;
+    float: right;
+    width: 200px;
+    height: 40px;
+    right: 5%;
+    text-align: center;
+    padding-left: 8px;
+    padding-top: 8px;
+    transition:background-color 1s ease-in;
+    cursor: pointer;
 }

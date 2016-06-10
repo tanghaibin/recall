@@ -1,10 +1,11 @@
 #rotate{
     position: relative;
+    text-align:center;
     left: 5%;
 }
 #relese-div{
     position: relative;
-    left: 78%;
+    left: 63%;
     width: 90px;
     height: 30px;
     border-radius: 10px;

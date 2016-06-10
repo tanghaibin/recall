@@ -3,9 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@include file="../../context/context.jsp" %>
 <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,7 +96,8 @@
     <!-- Swiper JS -->
     <script src="/swiper/swiper.min.js"></script>
 </head>
-<body style="background: url('/image/102976_bg1.png');">
+<body style="background: url('/image/102976_bg1.png');overflow-x: hidden">
+<%@include file="../../context/top.jsp" %>
 <div id="zz" style="width: 100%; height: 100%; z-index: 999; background: rgba(0, 0, 0, 0.42); position: absolute;display: none ">
     <a href="javascript:void(0);"><img style="position: relative;width:50px;height:50px;float:right;top:50px;right:50px;z-index: 1000" src="/img/x.png" onclick="myClose()"/></a>
     <%--<div style="position: relative;text-align: center;top:20%">--%>
@@ -113,7 +113,6 @@
 </div>
 
 
-<%@include file="../../context/top.jsp" %>
 
 <div style="width: 100%;height:300px;background: url('/image/top-image3.jpg');">
     <div style="color: white;font-size: 25px;position: relative;left: 20%;top: 5%">南汐寒笙</div><br/>
@@ -125,7 +124,7 @@
 <div id="dynamic-container">
     <c:forEach items="${requestScope.data.rows}" var="data" varStatus="count">
         <div class="dynamic div" id="div${count.index}">
-            <div class="easyui-panel" data-options="border:false" style="width:700px;height:auto;">
+            <div class="easyui-panel" data-options="border:false" style="width:80%;height:auto;">
                 <div style="float: left">
                     <img width="60px" height="60px" src="${ctx}/image/head.png" id="head-pic"/>
                 </div>
@@ -136,7 +135,7 @@
                     </span>
                 </div>
             </div>
-            <div class="easyui-panel"  style="width:700px;height:auto;padding:10px;">
+            <div class="easyui-panel"  style="width:80%;height:auto;padding:10px;">
                 <div class="dynamic-content">${data.content}</div>
                 <c:forEach items="${data.picturs}" var="pic" varStatus="count2">
                     <a href="javascript:void(0);" id="a${count.index}${count2.index}"><img class="dynamic-img" id="img${count.index}${count2.index}" /></a>
@@ -171,7 +170,7 @@
                 </c:forEach>
             </div>
 
-            <div id="dynamic-option-div" class="easyui-panel" data-options="border:false" style="width:700px;height:auto;padding:1px;background: #FAFAFA;">
+            <div id="dynamic-option-div" class="easyui-panel" data-options="border:false" style="width:80%;height:auto;padding:1px;background: #FAFAFA;">
                 <ul class="ul-inline"><div style="background: url('/img/icon.png');background-position: -224px -106px;width: 16px;height: 16px;"></div>
                     <li id="review-icon-${data.id}"><label>评论</label></li><div style="background: url('/img/icon.png');background-position: -224px -26px;width: 16px;height: 16px;"></div>
                     <li><label>赞</label></li><div style="background: url('/img/icon.png');background-position: -224px -130px;width: 16px;height: 16px;"></div>
@@ -179,7 +178,7 @@
                 </ul>
             </div>
 
-            <div id="review-div-content" class="easyui-panel" style="width:700px;height:auto;padding:10px;background: #FAFAFA;">
+            <div id="review-div-content" class="easyui-panel" style="width:80%;height:auto;padding:10px;background: #FAFAFA;">
                 <c:forEach items="${data.reviews}" var="review">
                     <c:if test="${review.type==0}">
                         <div style="float:none;"><b style="color:#A4B3C3">${review.user.username}</b><b></b> :${review.content}<input type="hidden" value="${review.user.id}"/><label style="position: relative;top:10px;"></label><div></div></div>
