@@ -33,10 +33,10 @@
       <div><a href="${ctx}/index" class="active">联系我</a></div>
 
 <shiro:notAuthenticated>
-      <div id="login-regist-div">
+
         <div id="login-div-a"><a href="${ctx}/user/login">登录</a></div>
         <div id="regist-div-a"><a href="${ctx}/user/register">注册</a></div>
-      </div>
+
   </div>
 </shiro:notAuthenticated>
 

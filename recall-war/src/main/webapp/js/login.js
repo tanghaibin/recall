@@ -23,22 +23,27 @@ function regevednt(){
         $("#login-form").submit();
     });
     $("#register-btn").click(function(){
-        $("#login-form").attr("action",'/user/add');
-        $("#login-form").submit();
+        if(validate()){
+            $("#login-form").attr("action",'/user/add');
+            $("#login-form").submit();
+        }
     });
     $("#login-div").click(function(){
-        $("#canvas").nextAll().remove();
+        //$("#canvas").nextAll().remove();
+        $(".error-label").html("");
         $("#content-div").css("height","300px");
         displayLoginContent(1);
         /**
          * 重新注册登录按钮事件
          */
         $("#login-btn").click(function(){
+            $("#login-form").attr("action",'/login');
             $("#login-form").submit();
         });
     });
         $("#regist-div").click(function(){
-            $("#canvas").nextAll().remove();
+            //$("#canvas").nextAll().remove();
+            $(".error-label").html("");
             $("#content-div").css("height","400px");
                 displayLoginContent(0);
         /**
@@ -59,31 +64,36 @@ function regevednt(){
 function displayLoginContent(type){
     $(".selected-type").css("background-color","");
     $(".selected-type").css("color","");
+
     if(type == 0){
+        $("#login-content-div").css("display","none");
+       // $("#register-content-div").css("display","");
+        $("#register-content-div").fadeIn("slow");
         $("input[class*='validatebox-invalid']").validatebox('readonly',false);
         $("#content-div").css("height","400px");
-        $("#content-div").append($("#register-content-div").html());
+        $("#content-div").append($("#register-content-div"));
         $("#register-btn").css("margin-left","35%");
         $(".input-div").css("padding-left","18%");
         $("#top-div").css("padding-left","15%");
 
-        $("#regist-div").css("background-color","#2194DE");
-        $("#regist-div").css("color","white");
+        $("#regist-div").css({"background-color":"#2194DE"},{"color":"white"});
     }else if(type == 1){
+        $("#register-content-div").css("display","none");
+        //$("#login-content-div").css("display","");
+        $("#login-content-div").fadeIn("slow");
         $("#content-div").css("height","300px");
         $("#content-div").css("width","30%");
-        $("#content-div").append($("#login-content-div").html());
+        $("#content-div").append($("#login-content-div"));
         $(".input-div").css("padding-left","22%");
 
-        $("#login-div").css("background-color","#2194DE");
-        $("#login-div").css("color","white");
+        $("#login-div").css({"background-color":"#2194DE"},{"color":"white"});
     }
 }
 /**
  * 提交时校验
  */
 function validate(){
-    if($("#login-for").form("validate")){
+    if($("#login-form").form("validate")){
         return true;
     }
     return false;

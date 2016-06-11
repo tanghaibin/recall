@@ -12,7 +12,7 @@
     <title>Infusion WP Theme</title>
     <link href="${ctx}/css/dynamic/dynamic.css" rel="stylesheet">
     <link href="${ctx}/css/common/common.css" rel="stylesheet">
-    <link href="${ctx}/css/styles.css" rel="stylesheet">
+    <%--<link href="${ctx}/css/styles.css" rel="stylesheet">--%>
     <!-- Bootstrap -->
     <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${ctx}/css/styles.css">
@@ -96,7 +96,7 @@
     <!-- Swiper JS -->
     <script src="/swiper/swiper.min.js"></script>
 </head>
-<body style="background: url('/image/102976_bg1.png');overflow-x: hidden">
+<body>
 <%@include file="../../context/top.jsp" %>
 <div id="zz" style="width: 100%; height: 100%; z-index: 999; background: rgba(0, 0, 0, 0.42); position: absolute;display: none ">
     <a href="javascript:void(0);"><img style="position: relative;width:50px;height:50px;float:right;top:50px;right:50px;z-index: 1000" src="/img/x.png" onclick="myClose()"/></a>

@@ -43,15 +43,17 @@ public class UserController {
      * @return
      */
     @RequestMapping("register")
-    public String toRegisterPage(){
-        return PRIFIX + "/register";
+    public String toRegisterPage(HttpServletRequest request){
+        request.setAttribute("type",0);
+        return PRIFIX + "/login";
     }
     /**
      * 跳转到登录页面
      * @return
      */
     @RequestMapping("login")
-    public String toLoginPage(){
+    public String toLoginPage(HttpServletRequest request){
+        request.setAttribute("type",1);
         return PRIFIX + "/login";
     }
 

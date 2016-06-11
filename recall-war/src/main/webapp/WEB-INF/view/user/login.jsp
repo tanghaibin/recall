@@ -28,10 +28,10 @@
 	</form>
 
 
-<div id="login-content-div" style="display: none">
-	<label>${msg}</label>
+<div id="login-content-div" style="">
+	<label class="error-label">${msg}</label>
 	<div class="input-div">
-		账号：<input type="email" name="email" required="required" value="${user.email}"/>
+		账号：<input type="text" name="email" required="required" value="${user.email}"/>
 	</div>
 	<div class="input-div">
 		密码：<input type="password" name="pswd" required="required" value="${user.pswd}"/>
@@ -39,15 +39,15 @@
 	<div id="login-btn">登 录</div>
 </div>
 <div id="register-content-div" style="display: none">
-	<label>${msg}</label>
+	<label class="error-label">${msg}</label>
 	<div class="input-div">
 		&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input type="text" name="username"  value="${user.username}" class="easyui-validatebox" data-options="required:true,validType:'length[1,10]'"/>
 	</div>
 	<div class="input-div">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号：<input type="email" name="email"  value="${user.email}" class="easyui-validatebox" data-options="required:true,validType:'email'"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号：<input type="text" name="email"  value="${user.email}" class="easyui-validatebox" data-options="required:true,validType:'email'"/>
 	</div>
 	<div class="input-div">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="pswd"  value="${user.pswd}" class="easyui-validatebox" data-options="required:true,validType:'length[3,10]'"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="pswd"  id="pswd" value="${user.pswd}" class="easyui-validatebox" data-options="required:true,validType:'length[3,10]'"/>
 	</div>
 	<div class="input-div">
 		确认密码：<input type="password" name="confirmPswd" value="${user.confirmPswd}" class="easyui-validatebox" data-options="required:true,validType:{length:[3,10],equals:['#password']}"/>
@@ -67,14 +67,11 @@
 	$.extend($.fn.validatebox.defaults.rules, {
 		equals: {
 			validator: function(value,param){
-				return value == $(param[0]).val();
+				return value == $("#pswd").val();
 			},
 			message: '确认密码必须与原密码匹配'
 		}
 	});
 </script>
-<style type="text/css">
-
-</style>
 </body>
 </html>

@@ -83,6 +83,9 @@ body{
     padding-left: 35%;
     color: red;
 }
+input{
+    text-indent: 10px;
+}
 input[class*="validatebox-invalid"]{
     background-color: white;
     border-color: #A9A9A9;
