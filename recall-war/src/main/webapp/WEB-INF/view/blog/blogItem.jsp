@@ -52,6 +52,36 @@
                     分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
                 </p>
             </div>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
+            </div>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="review-content-item-div">
@@ -67,7 +97,38 @@
                     分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
                 </p>
             </div>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
+            </div>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
+            </div>
         </div>
+
         <div class="review-content-item-div">
             <div class="head-pic-div">
                 <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
@@ -81,19 +142,35 @@
                     分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
                 </p>
             </div>
-        </div>
-        <div class="review-content-item-div">
-            <div class="head-pic-div">
-                <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
             </div>
-            <div class="head-nickName-div">
-                <b>风中叶</b><br/>
-                <b style="font-size: 9px">2016-02-18 23:40:58</b>
-            </div>
-            <div class="review-specific-content-div">
-                <p>
-                    分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
-                </p>
+
+            <div class="review-content-child-item-div">
+                <div class="head-pic-div">
+                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
+                </div>
+                <div class="head-nickName-div">
+                    <b>风中叶</b><br/>
+                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
+                </div>
+                <div class="review-specific-content-div">
+                    <p>
+                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
+                    </p>
+                </div>
             </div>
         </div>
     </div>
