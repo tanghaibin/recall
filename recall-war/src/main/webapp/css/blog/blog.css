@@ -1,0 +1,40 @@
+body{
+    font-family: '微软雅黑';
+    overflow-x: hidden;
+}
+#left-div{
+    position: relative;
+    border-right-width: 1px;
+    border-right-color: #DDDDDD;
+    border-right-style: dashed;
+    width: 20%;
+    height: 80%;
+    top:5%;
+    float: left;
+}
+.tree-title{
+    font-family: '微软雅黑';
+    font-size: 15px;
+}
+ul[class*='easyui-tree']{
+    margin-top: 7%;
+}
+#right-div{
+    position: relative;
+    width: 70%;
+    top:5%;
+    float:left;
+    left: 2%;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #DDDDDD;
+}
+#blog-title-div{
+    position: relative;
+    top: 2%;
+    width: 50%;
+    height: auto;
+    float: left;
+    left: 2%;
+    top:5%;
+}

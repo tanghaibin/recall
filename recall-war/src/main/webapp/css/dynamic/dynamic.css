@@ -44,3 +44,7 @@ body{
 #dynamic-option-div label{
     cursor: pointer;
 }
+.dynamic-img{
+    border-radius: 10px;
+    margin-left: 1%;
+}

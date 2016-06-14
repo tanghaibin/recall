@@ -26,17 +26,15 @@
       <div id="logo-div"></div>
       <div><a href="${ctx}/index" class="active" style="">主页</a></div>
       <div><a href="${ctx}/dynamic/toDynamicPage?pageNumber=0&pageSize=10">动态</a></div>
-      <div><a href="${ctx}/index" class="active">博客</a></div>
+      <div><a href="${ctx}/blog/toBlogPage" class="active">博客</a></div>
       <div><a href="${ctx}/index" class="active" >相册</a></div>
       <div><a href="${ctx}/index" class="active" >留言板</a></div>
       <div><a href="${ctx}/index" class="active">关于我</a></div>
       <div><a href="${ctx}/index" class="active">联系我</a></div>
 
 <shiro:notAuthenticated>
-
         <div id="login-div-a"><a href="${ctx}/user/login">登录</a></div>
         <div id="regist-div-a"><a href="${ctx}/user/register">注册</a></div>
-
   </div>
 </shiro:notAuthenticated>
 
