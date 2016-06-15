@@ -29,13 +29,13 @@ public class BlogController {
      * @return
      */
     @RequestMapping("toBlogPage")
-    public String toBlogPage(Page<Dynamic> page,HttpServletRequest request){
+    public String toBlogPage(){
 
         return PRIFIX + "/blog";
     }
 
     @RequestMapping("getBlogById")
-    public String getBlogById(Page<Dynamic> page,HttpServletRequest request){
+    public String getBlogById(){
 
         return PRIFIX + "/blogItem";
     }

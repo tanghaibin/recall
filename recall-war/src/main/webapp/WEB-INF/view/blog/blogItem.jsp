@@ -7,8 +7,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-
     <link type="text/css" rel="stylesheet" href="/css/blog/blogItem.css"/>
+    <link type="text/css" rel="stylesheet" href="/ueditor/themes/default/css/ueditor.css"/>
+    <script type="text/javascript" src="/js/blog/blogItem.js"/>
+    <script type="text/javascript" charset="utf-8" src="${ctx}/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="${ctx}/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="${ctx}/ueditor/lang/zh-cn/zh-cn.js"> </script>
 </head>
 
 <body>
@@ -82,6 +86,8 @@
                     </p>
                 </div>
             </div>
+            <div class="ueditor"></div>
+            <div class="review-review-btn">回 复</div>
         </div>
 
         <div class="review-content-item-div">
@@ -127,52 +133,20 @@
                     </p>
                 </div>
             </div>
-        </div>
-
-        <div class="review-content-item-div">
-            <div class="head-pic-div">
-                <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
-            </div>
-            <div class="head-nickName-div">
-                <b>风中叶</b><br/>
-                <b style="font-size: 9px">2016-02-18 23:40:58</b>
-            </div>
-            <div class="review-specific-content-div">
-                <p>
-                    分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
-                </p>
-            </div>
-
-            <div class="review-content-child-item-div">
-                <div class="head-pic-div">
-                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
-                </div>
-                <div class="head-nickName-div">
-                    <b>风中叶</b><br/>
-                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
-                </div>
-                <div class="review-specific-content-div">
-                    <p>
-                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
-                    </p>
-                </div>
-            </div>
-
-            <div class="review-content-child-item-div">
-                <div class="head-pic-div">
-                    <img width="50px" height="50px" src="${ctx}/image/head.png" class="head-pic"/>
-                </div>
-                <div class="head-nickName-div">
-                    <b>风中叶</b><br/>
-                    <b style="font-size: 9px">2016-02-18 23:40:58</b>
-                </div>
-                <div class="review-specific-content-div">
-                    <p>
-                        分布式的版本控系统如果要在多个人之间协作不也是需要一个像github一样的的远程版本库吗，这与集中式的有什么区别呢？
-                    </p>
-                </div>
-            </div>
+            <div class="ueditor"></div>
+            <div class="review-review-btn">回 复</div>
         </div>
     </div>
+
+
+    <%--ueditor div--%>
+    <div id="review-ueditor" style="display: none;height: 170px;">
+        <script id='editor' type='text/plain'></script>
+        <div class="publish-review-btn">发 表</div>
+    </div>
+
+<script type="text/javascript">
+    window.UEDITOR_HOME_URL = '${ctx}/ueditor/';
+</script>
 </body>
 </html>
