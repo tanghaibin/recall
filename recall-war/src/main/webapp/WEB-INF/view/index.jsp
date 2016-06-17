@@ -24,7 +24,7 @@
 <%@include file="../../context/top.jsp"%>
 <div class="banner">
     <ul>
-        <li style="background-image: url('../../img/mj4_2.jpg');">
+        <li style="background-image: url('../../image/1.jpg');">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">

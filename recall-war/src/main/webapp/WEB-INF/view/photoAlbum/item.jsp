@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
     <script src="${ctx}/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="/js/blog/blog.js"></script>
+    <script type="text/javascript" src="/js/photo/item.js"></script>
 </head>
 
 <body>
