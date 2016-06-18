@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/css/top.css">
-    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/easyui/themes/bootstrap/easyui.css">
     <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
     <script src="${ctx}/js/jquery-1.8.3.min.js"></script>

@@ -7,22 +7,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Infusion WP Theme</title>
+    <title>南汐寒笙</title>
     <link href="${ctx}/css/dynamic/dynamic.css" rel="stylesheet">
-    <link href="${ctx}/css/common/common.css" rel="stylesheet">
-    <%--<link href="${ctx}/css/styles.css" rel="stylesheet">--%>
-    <!-- Bootstrap -->
-    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${ctx}/css/styles.css">
-    <link rel="stylesheet" href="${ctx}/css/queries.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <![endif]-->
     <script src="${ctx}/js/jquery-1.8.3.min.js"></script>
-    <script src="${ctx}/js/bootstrap.min.js"></script>
-    <script src="${ctx}/js/scripts.js"></script>
-    <script src="${ctx}/js/unslider.min.js"></script>
     <%--swiper--%>
     <link rel="stylesheet" type="text/css" href="/swiper/swiper.min.css">
     <%--easyui--%>
@@ -35,19 +22,11 @@
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="${ctx}/ueditor/lang/zh-cn/zh-cn.js"></script>
-    <%--<script type="text/javascript" src="/ueditor/custom/custom.js"></script>--%>
-
-    <style type="text/css">
-        /*div{*/
-        /*width:100%;*/
-        /*}*/
-    </style>
     <%--webuploader--%>
     <link href="${ctx}/uploader/webuploader.css" rel="stylesheet" type="text/css"/>
     <link href="${ctx}/uploader/uploads.css" rel="stylesheet" type="text/css"/>
     <script src="${ctx}/uploader/webuploader.min.js" type="text/javascript" charset="UTF-8"></script>
     <script type="text/javascript" src="/js/utils.js"></script>
-    <script type="text/javascript" src="/js/common/common.js"></script>
 
     <script type="text/javascript">
         var mySwiper = null;

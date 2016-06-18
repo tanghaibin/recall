@@ -9,10 +9,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/css/top.css">
-    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${ctx}/css/styles.css">
-    <link rel="stylesheet" href="${ctx}/css/queries.css">
-
     <link rel="stylesheet" type="text/css" href="/easyui/themes/bootstrap/easyui.css">
     <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
     <script src="${ctx}/js/jquery-1.8.3.min.js"></script>

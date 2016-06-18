@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/css/top.css">
-    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${ctx}/css/styles.css">
     <link rel="stylesheet" href="${ctx}/css/queries.css">
 
