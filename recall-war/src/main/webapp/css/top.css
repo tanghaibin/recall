@@ -1,3 +1,11 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: '微软雅黑';
+    font-size: 15px;
+}
+
+
 #logo-div{
     margin-left: 30%;
     width: 5%;
@@ -8,7 +16,6 @@
     height:50px;
     background: #C9D5C2;
     position: relative;
-    top:-1.1%;
 }
 #top-div div{
     position: relative;
@@ -17,9 +24,9 @@
     height: 70%;
     text-align: center;
     margin-left: 3%;
-    margin-top: 0.5%;
+    margin-top: 0.2%;
     text-align: center;
-    padding-top: 0.3%;
+    padding-top: 0.6%;
     transition:background-color .5s ease-in;
     cursor: pointer;
     border-radius: 8px;

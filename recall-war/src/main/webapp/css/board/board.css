@@ -16,7 +16,7 @@ body{
     position: relative;
     width: 60%;
     /*height: 20%;*/
-    left:8%;
+    left:100px;
     background: rgba(0, 0, 255, 0.36);
     border-radius: 10px;
     margin-top: 1%;
@@ -26,11 +26,12 @@ body{
 }
 .triangle-div{
     position: relative;
-    left: -8%;
+    left: 70px;
     border: 15px;
     border-style: solid;
     border-color: transparent rgba(0, 0, 255, 0.36) transparent transparent;
     float: left;
+    margin-top:2%;
 }
 .content-right-div{
     position: relative;
@@ -46,11 +47,12 @@ body{
 }
 .triangle-right-div{
     position: relative;
-    right: -8%;
+    left:103.2%;
     border: 15px;
     border-style: solid;
     border-color: transparent transparent transparent #DDDDDD;
-    float: right;
+    float: left;
+    margin-top: -2%;
 }
 #review-ueditor{
     position: relative;
@@ -64,7 +66,7 @@ body{
 #leave-message{
     position: relative;
     width: 8%;
-    height: 7%;
+    height: 5%;
     margin-top:8%;
     left:90%;
     border-radius: 10px;
@@ -108,7 +110,7 @@ body{
 .head-nickName-right-div{
     position: relative;
     padding-top: 3%;
-    left:80%;
+    left:82%;
     line-height: 150%;
     margin-top:5%;
 }

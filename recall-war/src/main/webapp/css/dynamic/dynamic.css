@@ -48,3 +48,31 @@ body{
     border-radius: 10px;
     margin-left: 1%;
 }
+#top-div div{
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 90%;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 0.2%;
+    text-align: center;
+    padding-top: 0.6%;
+    transition:background-color .5s ease-in;
+    cursor: pointer;
+    border-radius: 8px;
+}
+#top-div div a{
+    text-decoration: none;
+    color: white;
+    font-family: '微软雅黑';
+    position: relative;
+}
+#login-div-a{
+    position: relative;
+    left: 15%;
+}
+#regist-div-a{
+    position: relative;
+    left: 12%;
+}

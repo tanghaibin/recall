@@ -24,12 +24,12 @@
 
   <div id="top-div">
       <div id="logo-div"></div>
-      <div><a href="${ctx}/index" class="active" style="">主页</a></div>
+      <div><a href="${ctx}/index" style="">主页</a></div>
       <div><a href="${ctx}/dynamic/toDynamicPage?pageNumber=0&pageSize=10">动态</a></div>
-      <div><a href="${ctx}/blog/toBlogPage" class="active">博客</a></div>
-      <div><a href="${ctx}/photo/toItemPage" class="active" >相册</a></div>
-      <div><a href="${ctx}/board/toBoardPage" class="active" >留言板</a></div>
-      <div><a href="${ctx}/about/toAboutPage" class="active">关于我</a></div>
+      <div><a href="${ctx}/blog/toBlogPage" >博客</a></div>
+      <div><a href="${ctx}/photo/toItemPage"  >相册</a></div>
+      <div><a href="${ctx}/board/toBoardPage" >留言板</a></div>
+      <div><a href="${ctx}/about/toAboutPage" >关于我</a></div>
       <div><a href="${ctx}/index" class="active">联系我</a></div>
 
 <shiro:notAuthenticated>

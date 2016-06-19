@@ -27,8 +27,8 @@
             <b>风中叶</b><br/>
             <b style="font-size: 9px">2016-02-18 23:40:58</b>
         </div>
+        <div class="triangle-div"></div>
         <div class="content-div">
-            <div class="triangle-div"></div>
 
 
             要知道我们是攒了多少个吃泡面的日子才买到了一个名牌包包；我们是熬了多少个加班的夜晚才拿到了这份offer；我们是用了多少次美颜加修饰才P出这么美丽的自己……那些晒出来的包包、offer、照片只是生活中的点缀而已，背后的一切才是真实的你我。别拿朋友圈的内容来评价他人的生活状态，因为我们晒的不是平时的生活，只是生活中某些触动自己的瞬间，某些彰显自己闪光点的瞬间而已。
@@ -45,9 +45,9 @@
             <b>风中叶</b><br/>
             <b style="font-size: 9px">2016-02-18 23:40:58</b>
         </div>
+        <div class="triangle-div"></div>
         <div class="content-div">
 
-            <div class="triangle-div"></div>
             要知道我们是攒了多少个吃泡面的日子才买到了一个名牌包包；我们是熬了多少个加班的夜晚才拿到了这份offer；我们是用了多少次美颜加修饰才P出这么美丽的自己……那些晒出来的包包、offer、照片只是生活中的点缀而已，背后的一切才是真实的你我。别拿朋友圈的内容来评价他人的生活状态，因为我们晒的不是平时的生活，只是生活中某些触动自己的瞬间，某些彰显自己闪光点的瞬间而已。
 
         </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="head-nickName-right-div" style="margin-top: 2%">
             <b style="position: relative;left:8%">风中叶</b><br/>
-            <b style="font-size: 9px;position: relative;left:4%">2016-02-18 23:40:58</b>
+            <b style="font-size: 9px;position: relative;left:3%">2016-02-18 23:40:58</b>
         </div>
         <div class="content-right-div">
             <div class="triangle-right-div"></div>
@@ -71,8 +71,8 @@
             <b>风中叶</b><br/>
             <b style="font-size: 9px">2016-02-18 23:40:58</b>
         </div>
+        <div class="triangle-div"></div>
         <div class="content-div">
-            <div class="triangle-div"></div>
             要知道我们是攒了多少个吃泡面的日子才买到了一个名牌包包
         </div>
         <div class="head-pic-right-div">
@@ -80,7 +80,7 @@
         </div>
         <div class="head-nickName-right-div" style="margin-top: 2%">
             <b style="position: relative;left:8%">风中叶</b><br/>
-            <b style="font-size: 9px;position: relative;left:4%">2016-02-18 23:40:58</b>
+            <b style="font-size: 9px;position: relative;left:3%">2016-02-18 23:40:58</b>
         </div>
         <div class="content-right-div">
             <div class="triangle-right-div"></div>

@@ -8,9 +8,13 @@
 <head>
     <meta charset="utf-8">
     <title>南汐寒笙</title>
-    <link href="${ctx}/css/dynamic/dynamic.css" rel="stylesheet">
     <script src="${ctx}/js/jquery-1.8.3.min.js"></script>
-    <%--swiper--%>
+    <link rel="stylesheet" type="text/css" href="/css/common/common.css">
+    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${ctx}/css/styles.css">
+    <link rel="stylesheet" href="${ctx}/css/queries.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<%--swiper--%>
     <link rel="stylesheet" type="text/css" href="/swiper/swiper.min.css">
     <%--easyui--%>
     <link rel="stylesheet" type="text/css" href="/easyui/themes/metro/easyui.css">
@@ -405,5 +409,8 @@
             })
         }
     </script>
+
+        <link href="${ctx}/css/dynamic/dynamic.css" rel="stylesheet">
+
 </body>
 </html>
