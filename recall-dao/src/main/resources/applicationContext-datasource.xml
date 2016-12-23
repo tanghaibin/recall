@@ -32,34 +32,7 @@
 		<!-- <property name="poolPreparedStatements" value="false" /> -->
 		<property name="maxPoolPreparedStatementPerConnectionSize" value="500" />
 	</bean>
-	<!-- sqlSessionFactory,mybatis -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:application-entity.xml"/>
-		<!-- 扫描model包-->
-		<property name="typeAliasesPackage" value="top.tanghaibin.recall.entity"/>
-		<property name="plugins"><!--分页插件-->
-			<array>
-				<bean class="com.github.pagehelper.PageHelper">
-					<property name="properties">
-						<value>
-							dialect=mysql
-							reasonable=true
-						</value>
-					</property>
-				</bean>
-			</array>
-		</property>
-	</bean>
-	<!-- scann mapper-->
-	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="top.tanghaibin.recall.dao.mapper"/>
-		<property name="properties">
-			<value>
-				mappers=top.tanghaibin.recall.core.MyBatisBaseMapper
-			</value>
-		</property>
-	</bean>
+	
 
 	<!-- redis-->
 	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"></bean>

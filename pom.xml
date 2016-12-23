@@ -13,7 +13,6 @@
     <module>recall-dao</module>
     <module>recall-admin-war</module>
     <module>recall-sdk</module>
-    <module>recall-client-war</module>
   </modules>
 
 
@@ -36,6 +35,7 @@
     <spring-framework.version>4.1.9.RELEASE</spring-framework.version>
     <servlet.version>3.1.0</servlet.version>
     <jstl.version>1.2</jstl.version>
+    <spring-data-jpa-version>1.11.0.M1</spring-data-jpa-version>
     <!-- auth -->
     <shiro.version>1.2.3</shiro.version>
 
@@ -48,6 +48,7 @@
     <spring-mail-version>4.2.5.RELEASE</spring-mail-version>
     <!-- redis-->
     <spring-data-redis-version>1.0.2.RELEASE</spring-data-redis-version>
+
   </properties>
 
 
@@ -218,40 +219,20 @@
       <version>${mysql-java-connector.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis-spring</artifactId>
-      <version>${mybatis-spring.version}</version>
-    </dependency>
-    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
       <version>${spring-framework.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>${mybatis.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>tk.mybatis</groupId>
-      <artifactId>mapper</artifactId>
-      <version>${mybatis-mapper.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.pagehelper</groupId>
-      <artifactId>pagehelper</artifactId>
-      <version>${mybatis-pager.version}</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
       <version>${druid.version}</version>
     </dependency>
-    <!-- 验证器-->
+    <!--spring data jpa-->
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>${hibernate-validator.version}</version>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>${spring-data-jpa-version}</version>
     </dependency>
 <!--邮件-->
     <dependency>
