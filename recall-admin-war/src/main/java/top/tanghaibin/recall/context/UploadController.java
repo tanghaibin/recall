@@ -9,13 +9,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import tk.mybatis.mapper.util.StringUtil;
 import top.tanghaibin.cons.Constants;
 import top.tanghaibin.string.RandomUtils;
-import top.tanghaibin.utils.CommonUtil;
 import top.tanghaibin.utils.DateUtils;
 
-import java.io.*;
+import java.io.File;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
